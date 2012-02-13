@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <rtc:RtcProfile rtc:version="0.2" rtc:id="RTC:javatea:ARM:RS40XCB_ARM:1.0.0" xmlns:rtcExt="http://www.openrtp.org/namespaces/rtc_ext" xmlns:rtcDoc="http://www.openrtp.org/namespaces/rtc_doc" xmlns:rtc="http://www.openrtp.org/namespaces/rtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <rtc:BasicInfo xsi:type="rtcExt:basic_info_ext" rtcExt:saveProject="RS40XCB_ARM" rtc:updateDate="2012-02-13T08:00:24.046+09:00" rtc:creationDate="2012-02-13T03:02:45.023+09:00" rtc:version="1.0.0" rtc:vendor="javatea" rtc:maxInstances="0" rtc:executionType="PeriodicExecutionContext" rtc:executionRate="50.0" rtc:description="This RTC is robot arm using the RS40XCB." rtc:category="ARM" rtc:componentKind="DataFlowComponent" rtc:activityType="PERIODIC" rtc:componentType="STATIC" rtc:name="RS40XCB_ARM">
+    <rtc:BasicInfo xsi:type="rtcExt:basic_info_ext" rtcExt:saveProject="RS40XCB_ARM" rtc:updateDate="2012-02-13T08:00:24.046+09:00" rtc:creationDate="2012-02-13T03:02:45.023+09:00" rtc:version="1.0.0" rtc:vendor="javatea" rtc:maxInstances="0" rtc:executionType="PeriodicExecutionContext" rtc:executionRate="30.0" rtc:description="This RTC is robot arm using the RS40XCB." rtc:category="ARM" rtc:componentKind="DataFlowComponent" rtc:activityType="PERIODIC" rtc:componentType="STATIC" rtc:name="RS40XCB_ARM">
         <rtcExt:VersionUpLogs></rtcExt:VersionUpLogs>
     </rtc:BasicInfo>
     <rtc:Actions>
@@ -39,6 +39,9 @@
     <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="LEFT" rtcExt:variableName="move" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedLongSeq" rtc:name="Move" rtc:portType="DataInPort">
         <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="" rtcDoc:description="Move the servo to the specified angle When you watch servo from a top, a clockwise rotation is a positive value and a counterclockwise rotation is a negative value."/>
     </rtc:DataPorts>
+    <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="LEFT" rtcExt:variableName="time" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedLongSeq" rtc:name="Time" rtc:portType="DataInPort">
+        <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="" rtcDoc:description="when the servo to move,take this value. This value is unit of 10msec."/>
+    </rtc:DataPorts>
     <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="RIGHT" rtcExt:variableName="angle" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedLongSeq" rtc:name="Angle" rtc:portType="DataOutPort">
         <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="" rtcDoc:description="This function can get current angle of unit of 0.1 degrees. If movable range of center is 0, clockwise rotation range is 150 degrees and counterclockwise rotation range is -150 degrees. "/>
     </rtc:DataPorts>
@@ -50,9 +53,6 @@
     </rtc:DataPorts>
     <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="RIGHT" rtcExt:variableName="temperature" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedLongSeq" rtc:name="Temperature" rtc:portType="DataOutPort">
         <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="" rtcDoc:description="This function can get of temperature of basal plate. The temperature sensor has a degree of error of + -3 due to individual differences. Protective function is activated by temperature and need to reset the servo. "/>
-    </rtc:DataPorts>
-    <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="RIGHT" rtcExt:variableName="time" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedLongSeq" rtc:name="Time" rtc:portType="DataOutPort">
-        <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="" rtcDoc:description="The lapsed time after starting movement is obtained in the unit for 10 ms. The last time will be held if movement is completed. "/>
     </rtc:DataPorts>
     <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="RIGHT" rtcExt:variableName="voltage" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedLongSeq" rtc:name="Voltage" rtc:portType="DataOutPort">
         <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="" rtcDoc:description="This function can get supply voltage of unit of 10mV.. There is an error of about + - 0.3V. "/>

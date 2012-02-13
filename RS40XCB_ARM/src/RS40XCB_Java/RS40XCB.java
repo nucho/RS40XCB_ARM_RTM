@@ -185,7 +185,7 @@ public class RS40XCB {
 	 *            servoID
 	 * @return supply voltage
 	 */
-	public int getVoltage(int sId) {
+	public int getVoltage() {
 		return ((readbuf[18] << 8) & 0x0000FF00) | (readbuf[17] & 0x000000FF);
 	}
 
@@ -228,22 +228,6 @@ public class RS40XCB {
 		// read
 		for (int i = 0; i < 26; i++)
 			readbuf[i] = (byte) (serial.read() & 0xff);
-
-		// if (len < 26) {
-		// // ��M�G���[
-		// System.out.println("��M�G���[");
-		// // return -2;
-		// }
-
-		// ��M�f�[�^�̊m�F
-		// sum = readbuf[2];
-		// for (i = 3; i < 26; i++) {
-		// sum = sum ^ readbuf[i];
-		// }
-		// if (sum) {
-		// // �`�F�b�N�T���G���[
-		// return -3;
-		// }
 
 	}
 
