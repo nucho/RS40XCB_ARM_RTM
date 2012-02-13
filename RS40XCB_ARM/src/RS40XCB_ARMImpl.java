@@ -246,6 +246,7 @@ public class RS40XCB_ARMImpl extends DataFlowComponentBase {
 					.getTemperature();
 			m_voltage.v.data[i - m_startID.value + 1] = servo.getVoltage();
 		}
+		
 		m_AngleOut.write();
 		m_LoadOut.write();
 		m_SpeedOut.write();

@@ -1,0 +1,3014 @@
+Feb 13 12:32:47 Manager INFO     : OpenRTM-aist-1.0.0
+Feb 13 12:32:47 Manager INFO     : Copyright (C) 2003-2008
+Feb 13 12:32:47 Manager INFO     :   Noriaki Ando
+Feb 13 12:32:47 Manager INFO     :   Task-intelligence Research Group,
+Feb 13 12:32:47 Manager INFO     :   Intelligent Systems Research Institute, AIST
+Feb 13 12:32:47 Manager INFO     : Manager starting.
+Feb 13 12:32:47 Manager INFO     : Starting local logging.
+Feb 13 12:32:47 Manager TRACE    : Manager.initORB()
+Feb 13 12:32:47 Manager DEBUG    : corba.args: 
+Feb 13 12:32:47 Manager DEBUG    : - config
+  - version: 1.0.0
+- openrtm
+  - version: OpenRTM-aist-1.0.0
+- manager
+  - instance_name: manager
+  - name: manager
+  - naming_formats: %h.host_cxt/%n.mgr
+  - pid: 1.6.0_26500297818
+  - refstring_path: /var/log/rtcmanager.ref
+  - modules
+    - load_path: ./
+    - abs_path_allowed: YES
+  - is_master: NO
+  - corba_servant: YES
+  - shutdown_on_nortcs: YES
+  - shutdown_auto: YES
+  - command: rtcd
+  - os
+    - name: Linux
+    - release: UNKNOWN
+    - version: 2.6.32-38-generic-pae
+    - arch: i386
+    - hostname: javatea-desktop
+- os
+  - name: 
+  - release: 
+  - version: 
+  - arch: 
+  - hostname: 
+- logger
+  - enable: YES
+  - file_name: ./rtc1.6.0_26500297818.log
+  - date_format: %b %d %H:%M:%S
+  - log_level: PARANOID
+  - stream_lock: NO
+  - master_logger: 
+- module
+  - conf_path: 
+  - load_path: 
+- naming
+  - enable: YES
+  - type: corba
+  - formats: %h.host_cxt/%n.rtc
+  - update
+    - enable: YES
+    - interval: 10.0
+- timer
+  - enable: YES
+  - tick: 0.1
+- corba
+  - args: 
+  - endpoint: 
+  - id: omniORB
+  - nameservers: localhost
+  - master_manager: localhost:2810
+  - nameservice
+    - replace_endpoint: NO
+- exec_cxt
+  - periodic
+    - type: jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext
+    - rate: 30.0
+  - evdriven
+    - type: jp.go.aist.rtm.RTC.executionContext.EventDrivenExecutionContext
+
+Feb 13 12:32:47 Manager DEBUG    : corbaloc: corbaloc:iiop:1.2@localhost:2810/manager
+Feb 13 12:32:47 Manager PARANOID : ORB options:  -ORBInitRef manager=corbaloc:iiop:1.2@localhost:2810/manager 
+Feb 13 12:32:48 InterceptorInitializer TRACE    : post_init
+Feb 13 12:32:48 IopIorInterceptor TRACE    : establish_components()
+Feb 13 12:32:48 IopIorInterceptor TRACE    : establish_components()
+Feb 13 12:32:48 Manager TRACE    : Manager.initNaming()
+Feb 13 12:32:48 Manager TRACE    : Register Naming Server: corba localhost
+Feb 13 12:32:48 NamingManager TRACE    : NamingManager.registerNameServer(corba, localhost:2809)
+Feb 13 12:32:48 NamingManager TRACE    : createNamingObj(method = corba, nameserver = )localhost:2809
+Feb 13 12:32:48 Manager TRACE    : Manager.getORB()
+Feb 13 12:32:48 CorbaNaming TRACE    : CorbaNaming.CorbaNaming(localhost:2809)
+Feb 13 12:32:48 NamingManager INFO     : NameServer connection succeeded: corba/localhost:2809
+Feb 13 12:32:48 Manager TRACE    : Manager.initFactories()
+Feb 13 12:32:48 InPortCorbaCdrProvider TRACE    : setInterfaceType(corba_cdr)
+Feb 13 12:32:48 InPortCorbaCdrProvider TRACE    : setInterfaceType(corba_cdr)
+Feb 13 12:32:48 Manager TRACE    : Manager.initExecContext()
+Feb 13 12:32:48 Manager TRACE    : Manager.registerECFactory(jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext)
+Feb 13 12:32:48 Manager TRACE    : Manager.registerECFactory(jp.go.aist.rtm.RTC.executionContext.ExtTrigExecutionContext)
+Feb 13 12:32:48 Manager TRACE    : Manager.registerECFactory(jp.go.aist.rtm.RTC.executionContext.OpenHRPExecutionContext)
+Feb 13 12:32:48 Manager TRACE    : Manager.initComposite()
+Feb 13 12:32:48 Manager TRACE    : Manager.registerFactory(PeriodicECSharedComposite)
+Feb 13 12:32:48 ManagerServant TRACE    : This manager is slave.
+Feb 13 12:32:48 ManagerServant TRACE    : findManager(host_port = localhost:2810)
+Feb 13 12:32:48 ManagerServant DEBUG    : corbaloc: corbaloc:iiop:1.2@localhost:2810/manager
+Feb 13 12:32:48 ManagerServant DEBUG    : CORBA SystemException caught (CORBA.org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 201  completed: No)
+Feb 13 12:32:48 ManagerServant INFO     : Master manager not found.
+Feb 13 12:32:48 Manager TRACE    : Manager.activateManager()
+Feb 13 12:32:48 Manager TRACE    : Manager.getPOAManager()
+Feb 13 12:32:48 Manager TRACE    : Manager.getPOAManager()
+Feb 13 12:32:48 Manager TRACE    : POA Manager activated.
+Feb 13 12:32:48 Manager TRACE    : Manager.registerFactory(RS40XCB_ARM)
+Feb 13 12:32:48 Manager TRACE    : Manager.createComponent(RS40XCB_ARM)
+Feb 13 12:32:48 Manager TRACE    : Manager.procComponentArgs(RS40XCB_ARM)
+Feb 13 12:32:48 Manager TRACE    : RTC basic propfile vendor:
+Feb 13 12:32:48 Manager TRACE    : RTC basic propfile category:
+Feb 13 12:32:48 Manager TRACE    : RTC basic propfile implementation_id:RS40XCB_ARM
+Feb 13 12:32:48 Manager TRACE    : RTC basic propfile version:
+Feb 13 12:32:48 Manager TRACE    : Manager.getORB()
+Feb 13 12:32:48 Manager TRACE    : Manager.getPOA()
+Feb 13 12:32:48 Manager TRACE    : Manager.getORB()
+Feb 13 12:32:48 Manager TRACE    : Manager.getPOA()
+Feb 13 12:32:48 Configuration_impl TRACE    : Configuration_impl.getObjRef()
+Feb 13 12:32:48 Torque DEBUG    : Port name: Torque
+Feb 13 12:32:48 Torque DEBUG    : setting port.port_type: DataIntPort
+Feb 13 12:32:48 Torque DEBUG    : setting dataport.data_type: TimedBooleanSeq
+Feb 13 12:32:48 Move DEBUG    : Port name: Move
+Feb 13 12:32:48 Move DEBUG    : setting port.port_type: DataIntPort
+Feb 13 12:32:48 Move DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 13 12:32:48 Time DEBUG    : Port name: Time
+Feb 13 12:32:48 Time DEBUG    : setting port.port_type: DataIntPort
+Feb 13 12:32:48 Time DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 13 12:32:48 Angle DEBUG    : Port name: Angle
+Feb 13 12:32:48 Angle DEBUG    : setting port.port_type: DataOutPort
+Feb 13 12:32:48 Angle DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 13 12:32:48 Angle DEBUG    : available subscription_type: new, flush, periodic
+Feb 13 12:32:48 Load DEBUG    : Port name: Load
+Feb 13 12:32:48 Load DEBUG    : setting port.port_type: DataOutPort
+Feb 13 12:32:48 Load DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 13 12:32:48 Load DEBUG    : available subscription_type: new, flush, periodic
+Feb 13 12:32:48 Speed DEBUG    : Port name: Speed
+Feb 13 12:32:48 Speed DEBUG    : setting port.port_type: DataOutPort
+Feb 13 12:32:48 Speed DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 13 12:32:48 Speed DEBUG    : available subscription_type: new, flush, periodic
+Feb 13 12:32:48 Temperature DEBUG    : Port name: Temperature
+Feb 13 12:32:48 Temperature DEBUG    : setting port.port_type: DataOutPort
+Feb 13 12:32:48 Temperature DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 13 12:32:48 Temperature DEBUG    : available subscription_type: new, flush, periodic
+Feb 13 12:32:48 Voltage DEBUG    : Port name: Voltage
+Feb 13 12:32:48 Voltage DEBUG    : setting port.port_type: DataOutPort
+Feb 13 12:32:48 Voltage DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 13 12:32:48 Voltage DEBUG    : available subscription_type: new, flush, periodic
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.setProperties()
+Feb 13 12:32:48 Configuration_impl TRACE    : Configuration_impl.getDeviceProfile()
+Feb 13 12:32:48 Configuration_impl TRACE    : Configuration_impl.set_device_profile()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getTypeName()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.setInstanceName(RS40XCB_ARM0)
+Feb 13 12:32:48 Manager TRACE    : RTC Created: 
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getCategory()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getTypeName()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getInstanceName()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.setProperties()
+Feb 13 12:32:48 Configuration_impl TRACE    : Configuration_impl.getDeviceProfile()
+Feb 13 12:32:48 Configuration_impl TRACE    : Configuration_impl.set_device_profile()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.setProperties()
+Feb 13 12:32:48 Configuration_impl TRACE    : Configuration_impl.getDeviceProfile()
+Feb 13 12:32:48 Configuration_impl TRACE    : Configuration_impl.set_device_profile()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getProperties()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getProperties()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getProperties()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getProperties()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.initialize()
+Feb 13 12:32:48 Manager TRACE    : Manager.createContext(jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext?rate=30.0)
+Feb 13 12:32:48 Manager TRACE    : ExecutionContext type: jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext
+Feb 13 12:32:48 Manager TRACE    : Manager.procContextArgs(jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext?rate=30.0,)
+Feb 13 12:32:48 Manager TRACE    : EC property rate:30.0
+Feb 13 12:32:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.set_rate(30.0)
+Feb 13 12:32:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.getObjRef()
+Feb 13 12:32:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.bindComponent()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.bindContext()
+Feb 13 12:32:48 PeriodicExecutionContext DEBUG    : bindComponent() returns id = 0
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.on_initialize()
+Feb 13 12:32:48 RTObject_impl TRACE    : addInPort(Torque)
+Feb 13 12:32:48 RTObject_impl TRACE    : addPort(PortBase)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:48 Torque TRACE    : setOwner(RS40XCB_ARM0)
+Feb 13 12:32:48 Torque TRACE    : getName() = RS40XCB_ARM0.Torque
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Torque TRACE    : init()
+Feb 13 12:32:48 Torque DEBUG    : single buffer mode.
+Feb 13 12:32:48 Torque TRACE    : initProviders()
+Feb 13 12:32:48 Torque DEBUG    : available providers: [corba_cdr]
+Feb 13 12:32:48 Torque DEBUG    : dataflow_type push is supported
+Feb 13 12:32:48 Torque TRACE    : iinitConsumers()
+Feb 13 12:32:48 Torque DEBUG    : available consumer: corba_cdr
+Feb 13 12:32:48 Torque DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 RTObject_impl TRACE    : addInPort(Move)
+Feb 13 12:32:48 RTObject_impl TRACE    : addPort(PortBase)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : setOwner(RS40XCB_ARM0)
+Feb 13 12:32:48 Move TRACE    : getName() = RS40XCB_ARM0.Move
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : init()
+Feb 13 12:32:48 Move DEBUG    : single buffer mode.
+Feb 13 12:32:48 Move TRACE    : initProviders()
+Feb 13 12:32:48 Move DEBUG    : available providers: [corba_cdr]
+Feb 13 12:32:48 Move DEBUG    : dataflow_type push is supported
+Feb 13 12:32:48 Move TRACE    : iinitConsumers()
+Feb 13 12:32:48 Move DEBUG    : available consumer: corba_cdr
+Feb 13 12:32:48 Move DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 RTObject_impl TRACE    : addInPort(Time)
+Feb 13 12:32:48 RTObject_impl TRACE    : addPort(PortBase)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : setOwner(RS40XCB_ARM0)
+Feb 13 12:32:48 Time TRACE    : getName() = RS40XCB_ARM0.Time
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : init()
+Feb 13 12:32:48 Time DEBUG    : single buffer mode.
+Feb 13 12:32:48 Time TRACE    : initProviders()
+Feb 13 12:32:48 Time DEBUG    : available providers: [corba_cdr]
+Feb 13 12:32:48 Time DEBUG    : dataflow_type push is supported
+Feb 13 12:32:48 Time TRACE    : iinitConsumers()
+Feb 13 12:32:48 Time DEBUG    : available consumer: corba_cdr
+Feb 13 12:32:48 Time DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 RTObject_impl TRACE    : addOutPort(Angle)
+Feb 13 12:32:48 RTObject_impl TRACE    : addPort(PortBase)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : setOwner(RS40XCB_ARM0)
+Feb 13 12:32:48 Angle TRACE    : getName() = RS40XCB_ARM0.Angle
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : init()
+Feb 13 12:32:48 Angle PARANOID : given properties:
+Feb 13 12:32:48 Angle DEBUG    : 
+Feb 13 12:32:48 Angle PARANOID : updated properties:
+Feb 13 12:32:48 Angle DEBUG    : 
+Feb 13 12:32:48 Angle TRACE    : initConsumers()
+Feb 13 12:32:48 Angle DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 13 12:32:48 Angle DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 Angle TRACE    : initProviders()
+Feb 13 12:32:48 Angle DEBUG    : available providers: [corba_cdr]
+Feb 13 12:32:48 Angle DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 RTObject_impl TRACE    : addOutPort(Load)
+Feb 13 12:32:48 RTObject_impl TRACE    : addPort(PortBase)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : setOwner(RS40XCB_ARM0)
+Feb 13 12:32:48 Load TRACE    : getName() = RS40XCB_ARM0.Load
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : init()
+Feb 13 12:32:48 Load PARANOID : given properties:
+Feb 13 12:32:48 Load DEBUG    : 
+Feb 13 12:32:48 Load PARANOID : updated properties:
+Feb 13 12:32:48 Load DEBUG    : 
+Feb 13 12:32:48 Load TRACE    : initConsumers()
+Feb 13 12:32:48 Load DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 13 12:32:48 Load DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 Load TRACE    : initProviders()
+Feb 13 12:32:48 Load DEBUG    : available providers: [corba_cdr]
+Feb 13 12:32:48 Load DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 RTObject_impl TRACE    : addOutPort(Speed)
+Feb 13 12:32:48 RTObject_impl TRACE    : addPort(PortBase)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Speed TRACE    : setOwner(RS40XCB_ARM0)
+Feb 13 12:32:48 Speed TRACE    : getName() = RS40XCB_ARM0.Speed
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Speed TRACE    : get_port_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Speed TRACE    : init()
+Feb 13 12:32:48 Speed PARANOID : given properties:
+Feb 13 12:32:48 Speed DEBUG    : 
+Feb 13 12:32:48 Speed PARANOID : updated properties:
+Feb 13 12:32:48 Speed DEBUG    : 
+Feb 13 12:32:48 Speed TRACE    : initConsumers()
+Feb 13 12:32:48 Speed DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 13 12:32:48 Speed DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 Speed TRACE    : initProviders()
+Feb 13 12:32:48 Speed DEBUG    : available providers: [corba_cdr]
+Feb 13 12:32:48 Speed DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 RTObject_impl TRACE    : addOutPort(Temperature)
+Feb 13 12:32:48 RTObject_impl TRACE    : addPort(PortBase)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Speed TRACE    : get_port_profile()
+Feb 13 12:32:48 Temperature TRACE    : setOwner(RS40XCB_ARM0)
+Feb 13 12:32:48 Temperature TRACE    : getName() = RS40XCB_ARM0.Temperature
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Speed TRACE    : get_port_profile()
+Feb 13 12:32:48 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Speed TRACE    : get_port_profile()
+Feb 13 12:32:48 Temperature TRACE    : init()
+Feb 13 12:32:48 Temperature PARANOID : given properties:
+Feb 13 12:32:48 Temperature DEBUG    : 
+Feb 13 12:32:48 Temperature PARANOID : updated properties:
+Feb 13 12:32:48 Temperature DEBUG    : 
+Feb 13 12:32:48 Temperature TRACE    : initConsumers()
+Feb 13 12:32:48 Temperature DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 13 12:32:48 Temperature DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 Temperature TRACE    : initProviders()
+Feb 13 12:32:48 Temperature DEBUG    : available providers: [corba_cdr]
+Feb 13 12:32:48 Temperature DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 RTObject_impl TRACE    : addOutPort(Voltage)
+Feb 13 12:32:48 RTObject_impl TRACE    : addPort(PortBase)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Speed TRACE    : get_port_profile()
+Feb 13 12:32:48 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:48 Voltage TRACE    : setOwner(RS40XCB_ARM0)
+Feb 13 12:32:48 Voltage TRACE    : getName() = RS40XCB_ARM0.Voltage
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Speed TRACE    : get_port_profile()
+Feb 13 12:32:48 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:48 Voltage TRACE    : get_port_profile()
+Feb 13 12:32:48 Torque TRACE    : get_port_profile()
+Feb 13 12:32:48 Move TRACE    : get_port_profile()
+Feb 13 12:32:48 Time TRACE    : get_port_profile()
+Feb 13 12:32:48 Angle TRACE    : get_port_profile()
+Feb 13 12:32:48 Load TRACE    : get_port_profile()
+Feb 13 12:32:48 Speed TRACE    : get_port_profile()
+Feb 13 12:32:48 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:48 Voltage TRACE    : init()
+Feb 13 12:32:48 Voltage PARANOID : given properties:
+Feb 13 12:32:48 Voltage DEBUG    : 
+Feb 13 12:32:48 Voltage PARANOID : updated properties:
+Feb 13 12:32:48 Voltage DEBUG    : 
+Feb 13 12:32:48 Voltage TRACE    : initConsumers()
+Feb 13 12:32:48 Voltage DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 13 12:32:48 Voltage DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 Voltage TRACE    : initProviders()
+Feb 13 12:32:48 Voltage DEBUG    : available providers: [corba_cdr]
+Feb 13 12:32:48 Voltage DEBUG    : dataflow_type pull is supported
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.bindParameter(portname,/dev/ttyUSB0)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.bindParameter(baudrate,115200)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.bindParameter(startID,1)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.bindParameter(endID,7)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.onInitialize()
+Feb 13 12:32:48 RTObject_impl DEBUG    : EC[0] starting
+Feb 13 12:32:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.start()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.on_startup(0)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.onStartup(0)
+Feb 13 12:32:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.open()
+Feb 13 12:32:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.run()
+Feb 13 12:32:48 Manager TRACE    : RTC initialization succeeded: 
+Feb 13 12:32:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.svc()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getInstanceName()
+Feb 13 12:32:48 Manager TRACE    : Manager.registerComponent(RS40XCB_ARM0)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getInstanceName()
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getNamingNames()
+Feb 13 12:32:48 Manager TRACE    : Bind name: javatea-desktop.host_cxt/RS40XCB_ARM0.rtc
+Feb 13 12:32:48 NamingManager TRACE    : NamingManager.bindObject(javatea-desktop.host_cxt/RS40XCB_ARM0.rtc)
+Feb 13 12:32:48 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 13 12:32:48 CorbaNaming TRACE    : in  CorbaNaming.rebindByString(javatea-desktop.host_cxt/RS40XCB_ARM0.rtc)
+Feb 13 12:32:48 CorbaNaming TRACE    : in  CorbaNaming.rebind([Lorg.omg.CosNaming.NameComponent;@7ecd78,true)
+Feb 13 12:32:48 CorbaNaming TRACE    :     isNamingContext is false.
+Feb 13 12:32:48 CorbaNaming TRACE    : out  CorbaNaming.rebind()
+Feb 13 12:32:48 CorbaNaming TRACE    : out CorbaNaming.rebindByString(javatea-desktop.host_cxt/RS40XCB_ARM0.rtc)
+Feb 13 12:32:48 Manager TRACE    : Manager.runManager(): blocking mode
+Feb 13 12:32:48 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:48 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:49 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:49 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:50 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:50 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:51 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:51 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:52 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:52 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:53 Torque TRACE    : get_port_profile()
+Feb 13 12:32:53 Move TRACE    : get_port_profile()
+Feb 13 12:32:53 Time TRACE    : get_port_profile()
+Feb 13 12:32:53 Angle TRACE    : get_port_profile()
+Feb 13 12:32:53 Load TRACE    : get_port_profile()
+Feb 13 12:32:53 Speed TRACE    : get_port_profile()
+Feb 13 12:32:53 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:53 Voltage TRACE    : get_port_profile()
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_configuration()
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:53 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:32:53 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_owned_organizations()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_context_handle()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:53 Torque TRACE    : get_port_profile()
+Feb 13 12:32:53 Move TRACE    : get_port_profile()
+Feb 13 12:32:53 Time TRACE    : get_port_profile()
+Feb 13 12:32:53 Angle TRACE    : get_port_profile()
+Feb 13 12:32:53 Load TRACE    : get_port_profile()
+Feb 13 12:32:53 Speed TRACE    : get_port_profile()
+Feb 13 12:32:53 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:53 Voltage TRACE    : get_port_profile()
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:53 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:32:53 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:53 RTObject_impl TRACE    : RTObject_impl.get_context_handle()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:53 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:53 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:53 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:54 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:54 Torque TRACE    : get_port_profile()
+Feb 13 12:32:54 Move TRACE    : get_port_profile()
+Feb 13 12:32:54 Time TRACE    : get_port_profile()
+Feb 13 12:32:54 Angle TRACE    : get_port_profile()
+Feb 13 12:32:54 Load TRACE    : get_port_profile()
+Feb 13 12:32:54 Speed TRACE    : get_port_profile()
+Feb 13 12:32:54 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:54 Voltage TRACE    : get_port_profile()
+Feb 13 12:32:54 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:32:54 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:32:54 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:32:54 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:54 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:32:54 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:32:54 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:54 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:54 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:54 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:55 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:55 Torque TRACE    : get_port_profile()
+Feb 13 12:32:55 Move TRACE    : get_port_profile()
+Feb 13 12:32:55 Time TRACE    : get_port_profile()
+Feb 13 12:32:55 Angle TRACE    : get_port_profile()
+Feb 13 12:32:55 Load TRACE    : get_port_profile()
+Feb 13 12:32:55 Speed TRACE    : get_port_profile()
+Feb 13 12:32:55 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:55 Voltage TRACE    : get_port_profile()
+Feb 13 12:32:55 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:32:55 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:32:55 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:32:55 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:55 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:32:55 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:32:55 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:55 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:55 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:55 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:56 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:56 Torque TRACE    : get_port_profile()
+Feb 13 12:32:56 Move TRACE    : get_port_profile()
+Feb 13 12:32:56 Time TRACE    : get_port_profile()
+Feb 13 12:32:56 Angle TRACE    : get_port_profile()
+Feb 13 12:32:56 Load TRACE    : get_port_profile()
+Feb 13 12:32:56 Speed TRACE    : get_port_profile()
+Feb 13 12:32:56 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:56 Voltage TRACE    : get_port_profile()
+Feb 13 12:32:56 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:32:56 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:32:56 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:32:56 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:56 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:32:56 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:32:56 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:56 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:56 Torque TRACE    : notify_connect()
+Feb 13 12:32:56 Torque TRACE    : publishInterfaces()
+Feb 13 12:32:56 Torque DEBUG    : ConnectorProfile::properties are as follows.
+Feb 13 12:32:56 Torque DEBUG    : - data_type: TimedBooleanSeq
+- interface_type: corba_cdr
+- dataflow_type: push
+- subscription_type: flush
+- publisher
+  - push_policy: all
+- serializer
+  - cdr
+    - endian: little,big
+
+Feb 13 12:32:56 Torque DEBUG    : dataflow_type = push .... create PushConnector
+Feb 13 12:32:56 Torque DEBUG    : interface_type:  corba_cdr
+Feb 13 12:32:56 InPortCorbaCdrProvider TRACE    : setInterfaceType(corba_cdr)
+Feb 13 12:32:56 Torque DEBUG    : provider created
+Feb 13 12:32:56 InPortCorbaCdrProvider TRACE    : publishInterface()
+Feb 13 12:32:56 InPortCorbaCdrProvider DEBUG    : dataport.data_type:TimedBooleanSeq
+dataport.interface_type:corba_cdr
+dataport.dataflow_type:push
+dataport.subscription_type:flush
+dataport.publisher.push_policy:all
+dataport.serializer.cdr.endian:little,big
+
+Feb 13 12:32:56 Torque TRACE    : InPortPushConnector create
+Feb 13 12:32:56 Torque PARANOID : connector push backed: 1
+Feb 13 12:32:56 Torque DEBUG    : publishInterface() successfully finished.
+Feb 13 12:32:56 Torque TRACE    : subscribeInterfaces()
+Feb 13 12:32:56 Torque DEBUG    : ConnectorProfile::properties are as follows.
+Feb 13 12:32:56 Torque DEBUG    : - data_type: TimedBooleanSeq
+- interface_type: corba_cdr
+- dataflow_type: push
+- subscription_type: flush
+- publisher
+  - push_policy: all
+- serializer
+  - cdr
+    - endian: little,big
+- provider: 
+- buffer: 
+- corba_cdr
+  - inport_ior: IOR:000000000000001a49444c3a4f70656e52544d2f496e506f72744364723a312e30000000000000010000000000000082000102000000000a3132372e302e312e3100b62400000031afabcb000000002074c516ef00000001000000000000000100000008526f6f74504f410000000008000000100000000014000000000000020000000100000020000000000001000100000002050100010001002000010109000000010001010000000026000000020002
+  - inport_ref: IOR:000000000000001a49444c3a4f70656e52544d2f496e506f72744364723a312e30000000000000010000000000000082000102000000000a3132372e302e312e3100b62400000031afabcb000000002074c516ef00000001000000000000000100000008526f6f74504f410000000008000000100000000014000000000000020000000100000020000000000001000100000002050100010001002000010109000000010001010000000026000000020002
+
+Feb 13 12:32:56 Torque TRACE    : Little Endian = true
+Feb 13 12:32:56 Torque DEBUG    : dataflow_type is push.
+Feb 13 12:32:56 Torque TRACE    : getConnectorById(id = 772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd)
+Feb 13 12:32:56 InPortConnector TRACE    : profile()
+Feb 13 12:32:56 InPortConnector TRACE    : id() = 772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd
+Feb 13 12:32:56 InPortConnector TRACE    : profile()
+Feb 13 12:32:56 Torque DEBUG    : subscribeInterfaces() successfully finished.
+Feb 13 12:32:56 Torque PARANOID : 0 connectors are existing.
+Feb 13 12:32:56 Torque PARANOID : New connector_id. Push backed.
+Feb 13 12:32:56 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:56 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:57 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:57 Torque TRACE    : get_port_profile()
+Feb 13 12:32:57 Move TRACE    : get_port_profile()
+Feb 13 12:32:57 Time TRACE    : get_port_profile()
+Feb 13 12:32:57 Angle TRACE    : get_port_profile()
+Feb 13 12:32:57 Load TRACE    : get_port_profile()
+Feb 13 12:32:57 Speed TRACE    : get_port_profile()
+Feb 13 12:32:57 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:57 Voltage TRACE    : get_port_profile()
+Feb 13 12:32:57 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:32:57 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:32:57 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:32:57 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:57 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:32:57 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:32:57 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:57 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:57 Manager TRACE    : Manager.shutdownOnNoRtcs()
+Feb 13 12:32:57 Manager TRACE    : Manager.getComponents()
+Feb 13 12:32:57 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:57 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:58 NamingManager TRACE    : NamingManager.update()
+Feb 13 12:32:58 NamingOnCorba TRACE    : isAlive()
+Feb 13 12:32:58 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:58 Torque TRACE    : get_port_profile()
+Feb 13 12:32:58 Move TRACE    : get_port_profile()
+Feb 13 12:32:58 Time TRACE    : get_port_profile()
+Feb 13 12:32:58 Angle TRACE    : get_port_profile()
+Feb 13 12:32:58 Load TRACE    : get_port_profile()
+Feb 13 12:32:58 Speed TRACE    : get_port_profile()
+Feb 13 12:32:58 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:58 Voltage TRACE    : get_port_profile()
+Feb 13 12:32:58 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:32:58 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:32:58 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:32:58 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:58 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:32:58 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:32:58 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:58 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:58 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:58 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:32:59 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:32:59 Torque TRACE    : get_port_profile()
+Feb 13 12:32:59 Move TRACE    : get_port_profile()
+Feb 13 12:32:59 Time TRACE    : get_port_profile()
+Feb 13 12:32:59 Angle TRACE    : get_port_profile()
+Feb 13 12:32:59 Load TRACE    : get_port_profile()
+Feb 13 12:32:59 Speed TRACE    : get_port_profile()
+Feb 13 12:32:59 Temperature TRACE    : get_port_profile()
+Feb 13 12:32:59 Voltage TRACE    : get_port_profile()
+Feb 13 12:32:59 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:32:59 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:32:59 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:32:59 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:59 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:32:59 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:32:59 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:32:59 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:32:59 Move TRACE    : notify_connect()
+Feb 13 12:32:59 Move TRACE    : publishInterfaces()
+Feb 13 12:32:59 Move DEBUG    : ConnectorProfile::properties are as follows.
+Feb 13 12:32:59 Move DEBUG    : - data_type: TimedLongSeq
+- interface_type: corba_cdr
+- dataflow_type: push
+- subscription_type: flush
+- publisher
+  - push_policy: all
+- serializer
+  - cdr
+    - endian: little,big
+
+Feb 13 12:32:59 Move DEBUG    : dataflow_type = push .... create PushConnector
+Feb 13 12:32:59 Move DEBUG    : interface_type:  corba_cdr
+Feb 13 12:32:59 InPortCorbaCdrProvider TRACE    : setInterfaceType(corba_cdr)
+Feb 13 12:32:59 Move DEBUG    : provider created
+Feb 13 12:32:59 InPortCorbaCdrProvider TRACE    : publishInterface()
+Feb 13 12:32:59 InPortCorbaCdrProvider DEBUG    : dataport.data_type:TimedLongSeq
+dataport.interface_type:corba_cdr
+dataport.dataflow_type:push
+dataport.subscription_type:flush
+dataport.publisher.push_policy:all
+dataport.serializer.cdr.endian:little,big
+
+Feb 13 12:32:59 Move TRACE    : InPortPushConnector create
+Feb 13 12:32:59 Move PARANOID : connector push backed: 1
+Feb 13 12:32:59 Move DEBUG    : publishInterface() successfully finished.
+Feb 13 12:32:59 Move TRACE    : subscribeInterfaces()
+Feb 13 12:32:59 Move DEBUG    : ConnectorProfile::properties are as follows.
+Feb 13 12:32:59 Move DEBUG    : - data_type: TimedLongSeq
+- interface_type: corba_cdr
+- dataflow_type: push
+- subscription_type: flush
+- publisher
+  - push_policy: all
+- serializer
+  - cdr
+    - endian: little,big
+- provider: 
+- buffer: 
+- corba_cdr
+  - inport_ior: IOR:000000000000001a49444c3a4f70656e52544d2f496e506f72744364723a312e30000000000000010000000000000082000102000000000a3132372e302e312e3100b62400000031afabcb000000002074c516ef00000001000000000000000100000008526f6f74504f410000000008000000110000000014000000000000020000000100000020000000000001000100000002050100010001002000010109000000010001010000000026000000020002
+  - inport_ref: IOR:000000000000001a49444c3a4f70656e52544d2f496e506f72744364723a312e30000000000000010000000000000082000102000000000a3132372e302e312e3100b62400000031afabcb000000002074c516ef00000001000000000000000100000008526f6f74504f410000000008000000110000000014000000000000020000000100000020000000000001000100000002050100010001002000010109000000010001010000000026000000020002
+
+Feb 13 12:32:59 Move TRACE    : Little Endian = true
+Feb 13 12:32:59 Move DEBUG    : dataflow_type is push.
+Feb 13 12:32:59 Move TRACE    : getConnectorById(id = 01f422ca-3178-4542-b791-b8c1ec2481cd)
+Feb 13 12:32:59 InPortConnector TRACE    : profile()
+Feb 13 12:32:59 InPortConnector TRACE    : id() = 01f422ca-3178-4542-b791-b8c1ec2481cd
+Feb 13 12:32:59 InPortConnector TRACE    : profile()
+Feb 13 12:32:59 Move DEBUG    : subscribeInterfaces() successfully finished.
+Feb 13 12:32:59 Move PARANOID : 0 connectors are existing.
+Feb 13 12:32:59 Move PARANOID : New connector_id. Push backed.
+Feb 13 12:32:59 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:32:59 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:00 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:00 Torque TRACE    : get_port_profile()
+Feb 13 12:33:00 Move TRACE    : get_port_profile()
+Feb 13 12:33:00 Time TRACE    : get_port_profile()
+Feb 13 12:33:00 Angle TRACE    : get_port_profile()
+Feb 13 12:33:00 Load TRACE    : get_port_profile()
+Feb 13 12:33:00 Speed TRACE    : get_port_profile()
+Feb 13 12:33:00 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:00 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:00 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:00 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:00 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:00 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:00 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:00 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:00 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:00 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:00 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:00 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:01 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:01 Torque TRACE    : get_port_profile()
+Feb 13 12:33:01 Move TRACE    : get_port_profile()
+Feb 13 12:33:01 Time TRACE    : get_port_profile()
+Feb 13 12:33:01 Angle TRACE    : get_port_profile()
+Feb 13 12:33:01 Load TRACE    : get_port_profile()
+Feb 13 12:33:01 Speed TRACE    : get_port_profile()
+Feb 13 12:33:01 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:01 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:01 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:01 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:01 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:01 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:01 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:01 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:01 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:01 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:01 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.activate_component()
+Feb 13 12:33:01 RTObject_impl TRACE    : RTObject_impl.on_activated(0)
+Feb 13 12:33:01 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:01 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:01 RTObject_impl TRACE    : RTObject_impl.onActivated(0)
+Feb 13 12:33:01 Torque TRACE    : activateInterfaces()
+Feb 13 12:33:01 InPortConnector TRACE    : profile()
+Feb 13 12:33:01 InPortConnector TRACE    : name() = RS40XCB_ARM_TEST0.Torque_RS40XCB_ARM0.Torque
+Feb 13 12:33:01 InPortConnector TRACE    : profile()
+Feb 13 12:33:01 InPortConnector TRACE    : profile()
+Feb 13 12:33:01 InPortConnector TRACE    : id() = 772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd
+Feb 13 12:33:01 InPortConnector TRACE    : profile()
+Feb 13 12:33:01 Torque DEBUG    : activate connector: RS40XCB_ARM_TEST0.Torque_RS40XCB_ARM0.Torque 772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd
+Feb 13 12:33:01 Move TRACE    : activateInterfaces()
+Feb 13 12:33:01 InPortConnector TRACE    : profile()
+Feb 13 12:33:01 InPortConnector TRACE    : name() = RS40XCB_ARM_TEST0.Move_RS40XCB_ARM0.Move
+Feb 13 12:33:01 InPortConnector TRACE    : profile()
+Feb 13 12:33:01 InPortConnector TRACE    : profile()
+Feb 13 12:33:01 InPortConnector TRACE    : id() = 01f422ca-3178-4542-b791-b8c1ec2481cd
+Feb 13 12:33:01 InPortConnector TRACE    : profile()
+Feb 13 12:33:01 Move DEBUG    : activate connector: RS40XCB_ARM_TEST0.Move_RS40XCB_ARM0.Move 01f422ca-3178-4542-b791-b8c1ec2481cd
+Feb 13 12:33:01 Time TRACE    : activateInterfaces()
+Feb 13 12:33:02 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:02 Torque TRACE    : isNew()
+Feb 13 12:33:02 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:02 Time TRACE    : isNew()
+Feb 13 12:33:02 Time DEBUG    : no connectors
+Feb 13 12:33:02 Move TRACE    : isNew()
+Feb 13 12:33:02 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:02 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:02 Torque TRACE    : get_port_profile()
+Feb 13 12:33:02 Move TRACE    : get_port_profile()
+Feb 13 12:33:02 Time TRACE    : get_port_profile()
+Feb 13 12:33:02 Angle TRACE    : get_port_profile()
+Feb 13 12:33:02 Load TRACE    : get_port_profile()
+Feb 13 12:33:02 Speed TRACE    : get_port_profile()
+Feb 13 12:33:02 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:02 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:02 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:02 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:02 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:02 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:02 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:02 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:02 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:02 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:02 Angle TRACE    : DataType write()
+Feb 13 12:33:02 Load TRACE    : DataType write()
+Feb 13 12:33:02 Speed TRACE    : DataType write()
+Feb 13 12:33:02 Temperature TRACE    : DataType write()
+Feb 13 12:33:02 Voltage TRACE    : DataType write()
+Feb 13 12:33:02 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:02 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:02 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:02 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:02 Torque TRACE    : isNew()
+Feb 13 12:33:02 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:02 Time TRACE    : isNew()
+Feb 13 12:33:02 Time DEBUG    : no connectors
+Feb 13 12:33:02 Move TRACE    : isNew()
+Feb 13 12:33:02 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:02 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:02 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:03 Angle TRACE    : DataType write()
+Feb 13 12:33:03 Load TRACE    : DataType write()
+Feb 13 12:33:03 Speed TRACE    : DataType write()
+Feb 13 12:33:03 Temperature TRACE    : DataType write()
+Feb 13 12:33:03 Voltage TRACE    : DataType write()
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:03 Torque TRACE    : get_port_profile()
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:03 Torque TRACE    : isNew()
+Feb 13 12:33:03 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:03 Time TRACE    : isNew()
+Feb 13 12:33:03 Time DEBUG    : no connectors
+Feb 13 12:33:03 Move TRACE    : isNew()
+Feb 13 12:33:03 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:03 Move TRACE    : get_port_profile()
+Feb 13 12:33:03 Time TRACE    : get_port_profile()
+Feb 13 12:33:03 Angle TRACE    : get_port_profile()
+Feb 13 12:33:03 Load TRACE    : get_port_profile()
+Feb 13 12:33:03 Speed TRACE    : get_port_profile()
+Feb 13 12:33:03 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:03 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:03 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:03 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:03 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:03 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:03 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:03 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:03 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:03 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:03 Angle TRACE    : DataType write()
+Feb 13 12:33:03 Load TRACE    : DataType write()
+Feb 13 12:33:03 Speed TRACE    : DataType write()
+Feb 13 12:33:03 Temperature TRACE    : DataType write()
+Feb 13 12:33:03 Voltage TRACE    : DataType write()
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:03 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:04 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:04 Torque TRACE    : isNew()
+Feb 13 12:33:04 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:04 Time TRACE    : isNew()
+Feb 13 12:33:04 Time DEBUG    : no connectors
+Feb 13 12:33:04 Move TRACE    : isNew()
+Feb 13 12:33:04 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:04 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:04 Torque TRACE    : get_port_profile()
+Feb 13 12:33:04 Move TRACE    : get_port_profile()
+Feb 13 12:33:04 Time TRACE    : get_port_profile()
+Feb 13 12:33:04 Angle TRACE    : get_port_profile()
+Feb 13 12:33:04 Load TRACE    : get_port_profile()
+Feb 13 12:33:04 Speed TRACE    : get_port_profile()
+Feb 13 12:33:04 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:04 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:04 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:04 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:04 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:04 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:04 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:04 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:04 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:04 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:04 Angle TRACE    : DataType write()
+Feb 13 12:33:04 Load TRACE    : DataType write()
+Feb 13 12:33:04 Speed TRACE    : DataType write()
+Feb 13 12:33:04 Temperature TRACE    : DataType write()
+Feb 13 12:33:04 Voltage TRACE    : DataType write()
+Feb 13 12:33:04 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:04 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:04 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:04 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:04 Torque TRACE    : isNew()
+Feb 13 12:33:04 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:04 Time TRACE    : isNew()
+Feb 13 12:33:04 Time DEBUG    : no connectors
+Feb 13 12:33:04 Move TRACE    : isNew()
+Feb 13 12:33:04 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:04 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:04 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:05 Angle TRACE    : DataType write()
+Feb 13 12:33:05 Load TRACE    : DataType write()
+Feb 13 12:33:05 Speed TRACE    : DataType write()
+Feb 13 12:33:05 Temperature TRACE    : DataType write()
+Feb 13 12:33:05 Voltage TRACE    : DataType write()
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:05 Torque TRACE    : get_port_profile()
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:05 Torque TRACE    : isNew()
+Feb 13 12:33:05 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:05 Time TRACE    : isNew()
+Feb 13 12:33:05 Time DEBUG    : no connectors
+Feb 13 12:33:05 Move TRACE    : isNew()
+Feb 13 12:33:05 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:05 Move TRACE    : get_port_profile()
+Feb 13 12:33:05 Time TRACE    : get_port_profile()
+Feb 13 12:33:05 Angle TRACE    : get_port_profile()
+Feb 13 12:33:05 Load TRACE    : get_port_profile()
+Feb 13 12:33:05 Speed TRACE    : get_port_profile()
+Feb 13 12:33:05 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:05 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:05 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:05 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:05 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:05 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:05 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:05 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:05 Angle TRACE    : DataType write()
+Feb 13 12:33:05 Load TRACE    : DataType write()
+Feb 13 12:33:05 Speed TRACE    : DataType write()
+Feb 13 12:33:05 Temperature TRACE    : DataType write()
+Feb 13 12:33:05 Voltage TRACE    : DataType write()
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:05 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:05 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:05 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:06 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:06 Torque TRACE    : isNew()
+Feb 13 12:33:06 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:06 Time TRACE    : isNew()
+Feb 13 12:33:06 Time DEBUG    : no connectors
+Feb 13 12:33:06 Move TRACE    : isNew()
+Feb 13 12:33:06 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:06 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:06 Torque TRACE    : get_port_profile()
+Feb 13 12:33:06 Move TRACE    : get_port_profile()
+Feb 13 12:33:06 Time TRACE    : get_port_profile()
+Feb 13 12:33:06 Angle TRACE    : get_port_profile()
+Feb 13 12:33:06 Load TRACE    : get_port_profile()
+Feb 13 12:33:06 Speed TRACE    : get_port_profile()
+Feb 13 12:33:06 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:06 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:06 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:06 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:06 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:06 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:06 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:06 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:06 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:06 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:06 Angle TRACE    : DataType write()
+Feb 13 12:33:06 Load TRACE    : DataType write()
+Feb 13 12:33:06 Speed TRACE    : DataType write()
+Feb 13 12:33:06 Temperature TRACE    : DataType write()
+Feb 13 12:33:06 Voltage TRACE    : DataType write()
+Feb 13 12:33:06 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:06 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:06 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:06 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:06 Torque TRACE    : isNew()
+Feb 13 12:33:06 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:06 Time TRACE    : isNew()
+Feb 13 12:33:06 Time DEBUG    : no connectors
+Feb 13 12:33:06 Move TRACE    : isNew()
+Feb 13 12:33:06 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:06 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:06 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:07 Angle TRACE    : DataType write()
+Feb 13 12:33:07 Load TRACE    : DataType write()
+Feb 13 12:33:07 Speed TRACE    : DataType write()
+Feb 13 12:33:07 Temperature TRACE    : DataType write()
+Feb 13 12:33:07 Voltage TRACE    : DataType write()
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:07 Torque TRACE    : get_port_profile()
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:07 Torque TRACE    : isNew()
+Feb 13 12:33:07 Move TRACE    : get_port_profile()
+Feb 13 12:33:07 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:07 Time TRACE    : isNew()
+Feb 13 12:33:07 Time DEBUG    : no connectors
+Feb 13 12:33:07 Move TRACE    : isNew()
+Feb 13 12:33:07 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:07 Time TRACE    : get_port_profile()
+Feb 13 12:33:07 Angle TRACE    : get_port_profile()
+Feb 13 12:33:07 Load TRACE    : get_port_profile()
+Feb 13 12:33:07 Speed TRACE    : get_port_profile()
+Feb 13 12:33:07 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:07 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:07 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:07 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:07 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:07 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:07 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:07 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:07 Angle TRACE    : DataType write()
+Feb 13 12:33:07 Load TRACE    : DataType write()
+Feb 13 12:33:07 Speed TRACE    : DataType write()
+Feb 13 12:33:07 Temperature TRACE    : DataType write()
+Feb 13 12:33:07 Voltage TRACE    : DataType write()
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:07 Manager TRACE    : Manager.shutdownOnNoRtcs()
+Feb 13 12:33:07 Manager TRACE    : Manager.getComponents()
+Feb 13 12:33:07 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:07 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:07 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:07 Torque TRACE    : isNew()
+Feb 13 12:33:07 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:07 Time TRACE    : isNew()
+Feb 13 12:33:08 Time DEBUG    : no connectors
+Feb 13 12:33:08 Move TRACE    : isNew()
+Feb 13 12:33:08 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:08 NamingManager TRACE    : NamingManager.update()
+Feb 13 12:33:08 NamingOnCorba TRACE    : isAlive()
+Feb 13 12:33:08 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:08 Torque TRACE    : get_port_profile()
+Feb 13 12:33:08 Move TRACE    : get_port_profile()
+Feb 13 12:33:08 Time TRACE    : get_port_profile()
+Feb 13 12:33:08 Angle TRACE    : get_port_profile()
+Feb 13 12:33:08 Load TRACE    : get_port_profile()
+Feb 13 12:33:08 Speed TRACE    : get_port_profile()
+Feb 13 12:33:08 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:08 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:08 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:08 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:08 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:08 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:08 Angle TRACE    : DataType write()
+Feb 13 12:33:08 Load TRACE    : DataType write()
+Feb 13 12:33:08 Speed TRACE    : DataType write()
+Feb 13 12:33:08 Temperature TRACE    : DataType write()
+Feb 13 12:33:08 Voltage TRACE    : DataType write()
+Feb 13 12:33:08 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:08 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:08 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:08 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:08 Torque TRACE    : isNew()
+Feb 13 12:33:08 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:08 Time TRACE    : isNew()
+Feb 13 12:33:08 Time DEBUG    : no connectors
+Feb 13 12:33:08 Move TRACE    : isNew()
+Feb 13 12:33:08 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:08 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:08 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:09 Angle TRACE    : DataType write()
+Feb 13 12:33:09 Load TRACE    : DataType write()
+Feb 13 12:33:09 Speed TRACE    : DataType write()
+Feb 13 12:33:09 Temperature TRACE    : DataType write()
+Feb 13 12:33:09 Voltage TRACE    : DataType write()
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:09 Torque TRACE    : isNew()
+Feb 13 12:33:09 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:09 Time TRACE    : isNew()
+Feb 13 12:33:09 Time DEBUG    : no connectors
+Feb 13 12:33:09 Move TRACE    : isNew()
+Feb 13 12:33:09 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:09 Torque TRACE    : get_port_profile()
+Feb 13 12:33:09 Move TRACE    : get_port_profile()
+Feb 13 12:33:09 Time TRACE    : get_port_profile()
+Feb 13 12:33:09 Angle TRACE    : get_port_profile()
+Feb 13 12:33:09 Load TRACE    : get_port_profile()
+Feb 13 12:33:09 Speed TRACE    : get_port_profile()
+Feb 13 12:33:09 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:09 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:09 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:09 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:09 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:09 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:09 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:09 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:09 Angle TRACE    : DataType write()
+Feb 13 12:33:09 Load TRACE    : DataType write()
+Feb 13 12:33:09 Speed TRACE    : DataType write()
+Feb 13 12:33:09 Temperature TRACE    : DataType write()
+Feb 13 12:33:09 Voltage TRACE    : DataType write()
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:09 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:09 Torque TRACE    : isNew()
+Feb 13 12:33:09 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:09 Time TRACE    : isNew()
+Feb 13 12:33:09 Time DEBUG    : no connectors
+Feb 13 12:33:09 Move TRACE    : isNew()
+Feb 13 12:33:09 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:10 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:10 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:10 Angle TRACE    : DataType write()
+Feb 13 12:33:10 Load TRACE    : DataType write()
+Feb 13 12:33:10 Speed TRACE    : DataType write()
+Feb 13 12:33:10 Temperature TRACE    : DataType write()
+Feb 13 12:33:10 Voltage TRACE    : DataType write()
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:10 Torque TRACE    : isNew()
+Feb 13 12:33:10 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:10 Time TRACE    : isNew()
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:10 Time DEBUG    : no connectors
+Feb 13 12:33:10 Move TRACE    : isNew()
+Feb 13 12:33:10 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:10 Torque TRACE    : get_port_profile()
+Feb 13 12:33:10 Move TRACE    : get_port_profile()
+Feb 13 12:33:10 Time TRACE    : get_port_profile()
+Feb 13 12:33:10 Angle TRACE    : get_port_profile()
+Feb 13 12:33:10 Load TRACE    : get_port_profile()
+Feb 13 12:33:10 Speed TRACE    : get_port_profile()
+Feb 13 12:33:10 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:10 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:10 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:10 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:10 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:10 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:10 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:10 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:10 Angle TRACE    : DataType write()
+Feb 13 12:33:10 Load TRACE    : DataType write()
+Feb 13 12:33:10 Speed TRACE    : DataType write()
+Feb 13 12:33:10 Temperature TRACE    : DataType write()
+Feb 13 12:33:10 Voltage TRACE    : DataType write()
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:10 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:10 Torque TRACE    : isNew()
+Feb 13 12:33:10 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:10 Time TRACE    : isNew()
+Feb 13 12:33:10 Time DEBUG    : no connectors
+Feb 13 12:33:10 Move TRACE    : isNew()
+Feb 13 12:33:10 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:11 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:11 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:11 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:11 Torque TRACE    : get_port_profile()
+Feb 13 12:33:11 Move TRACE    : get_port_profile()
+Feb 13 12:33:11 Time TRACE    : get_port_profile()
+Feb 13 12:33:11 Angle TRACE    : get_port_profile()
+Feb 13 12:33:11 Load TRACE    : get_port_profile()
+Feb 13 12:33:11 Speed TRACE    : get_port_profile()
+Feb 13 12:33:11 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:11 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:11 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:11 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:11 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:11 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:11 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:11 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:11 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:11 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:11 Angle TRACE    : DataType write()
+Feb 13 12:33:11 Load TRACE    : DataType write()
+Feb 13 12:33:11 Speed TRACE    : DataType write()
+Feb 13 12:33:11 Temperature TRACE    : DataType write()
+Feb 13 12:33:11 Voltage TRACE    : DataType write()
+Feb 13 12:33:11 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:11 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:11 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:11 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:11 Torque TRACE    : isNew()
+Feb 13 12:33:11 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:11 Time TRACE    : isNew()
+Feb 13 12:33:11 Time DEBUG    : no connectors
+Feb 13 12:33:11 Move TRACE    : isNew()
+Feb 13 12:33:11 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:12 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:12 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:12 Angle TRACE    : DataType write()
+Feb 13 12:33:12 Load TRACE    : DataType write()
+Feb 13 12:33:12 Speed TRACE    : DataType write()
+Feb 13 12:33:12 Temperature TRACE    : DataType write()
+Feb 13 12:33:12 Voltage TRACE    : DataType write()
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:12 Torque TRACE    : isNew()
+Feb 13 12:33:12 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:12 Time TRACE    : isNew()
+Feb 13 12:33:12 Time DEBUG    : no connectors
+Feb 13 12:33:12 Move TRACE    : isNew()
+Feb 13 12:33:12 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:12 Torque TRACE    : get_port_profile()
+Feb 13 12:33:12 Move TRACE    : get_port_profile()
+Feb 13 12:33:12 Time TRACE    : get_port_profile()
+Feb 13 12:33:12 Angle TRACE    : get_port_profile()
+Feb 13 12:33:12 Load TRACE    : get_port_profile()
+Feb 13 12:33:12 Speed TRACE    : get_port_profile()
+Feb 13 12:33:12 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:12 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:12 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:12 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:12 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:12 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:12 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:12 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:12 Angle TRACE    : DataType write()
+Feb 13 12:33:12 Load TRACE    : DataType write()
+Feb 13 12:33:12 Speed TRACE    : DataType write()
+Feb 13 12:33:12 Temperature TRACE    : DataType write()
+Feb 13 12:33:12 Voltage TRACE    : DataType write()
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:12 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:12 Torque TRACE    : isNew()
+Feb 13 12:33:12 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:12 Time TRACE    : isNew()
+Feb 13 12:33:12 Time DEBUG    : no connectors
+Feb 13 12:33:12 Move TRACE    : isNew()
+Feb 13 12:33:12 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:13 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:13 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:13 Angle TRACE    : DataType write()
+Feb 13 12:33:13 Load TRACE    : DataType write()
+Feb 13 12:33:13 Speed TRACE    : DataType write()
+Feb 13 12:33:13 Temperature TRACE    : DataType write()
+Feb 13 12:33:13 Voltage TRACE    : DataType write()
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:13 Torque TRACE    : isNew()
+Feb 13 12:33:13 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:13 Time TRACE    : isNew()
+Feb 13 12:33:13 Time DEBUG    : no connectors
+Feb 13 12:33:13 Move TRACE    : isNew()
+Feb 13 12:33:13 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:13 Torque TRACE    : get_port_profile()
+Feb 13 12:33:13 Move TRACE    : get_port_profile()
+Feb 13 12:33:13 Time TRACE    : get_port_profile()
+Feb 13 12:33:13 Angle TRACE    : get_port_profile()
+Feb 13 12:33:13 Load TRACE    : get_port_profile()
+Feb 13 12:33:13 Speed TRACE    : get_port_profile()
+Feb 13 12:33:13 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:13 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:13 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:13 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:13 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:13 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:13 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:13 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:13 Angle TRACE    : DataType write()
+Feb 13 12:33:13 Load TRACE    : DataType write()
+Feb 13 12:33:13 Speed TRACE    : DataType write()
+Feb 13 12:33:13 Temperature TRACE    : DataType write()
+Feb 13 12:33:13 Voltage TRACE    : DataType write()
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:13 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:13 Torque TRACE    : isNew()
+Feb 13 12:33:13 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:13 Time TRACE    : isNew()
+Feb 13 12:33:13 Time DEBUG    : no connectors
+Feb 13 12:33:13 Move TRACE    : isNew()
+Feb 13 12:33:13 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:13 InPortCorbaCdrProvider PARANOID : InPortCorbaCdrProvider.put()
+Feb 13 12:33:13 InPortCorbaCdrProvider PARANOID : received data size: 14
+Feb 13 12:33:13 InPortCorbaCdrProvider PARANOID : converted CDR data size: 14
+Feb 13 12:33:13 InPortCorbaCdrProvider PARANOID : InPortCorbaCdrProvider.put()
+Feb 13 12:33:13 InPortCorbaCdrProvider PARANOID : received data size: 20
+Feb 13 12:33:13 InPortCorbaCdrProvider PARANOID : converted CDR data size: 20
+Feb 13 12:33:14 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:14 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:14 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:14 Torque TRACE    : get_port_profile()
+Feb 13 12:33:14 Move TRACE    : get_port_profile()
+Feb 13 12:33:14 Time TRACE    : get_port_profile()
+Feb 13 12:33:14 Angle TRACE    : get_port_profile()
+Feb 13 12:33:14 Load TRACE    : get_port_profile()
+Feb 13 12:33:14 Speed TRACE    : get_port_profile()
+Feb 13 12:33:14 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:14 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:14 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:14 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:14 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:14 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:14 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:14 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:14 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:14 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:14 Angle TRACE    : DataType write()
+Feb 13 12:33:14 Load TRACE    : DataType write()
+Feb 13 12:33:14 Speed TRACE    : DataType write()
+Feb 13 12:33:14 Temperature TRACE    : DataType write()
+Feb 13 12:33:14 Voltage TRACE    : DataType write()
+Feb 13 12:33:14 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:14 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:14 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:14 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:14 Torque TRACE    : isNew()
+Feb 13 12:33:14 Torque DEBUG    : isNew() = true, readable data: 1
+Feb 13 12:33:14 Torque TRACE    : DataType read()
+Feb 13 12:33:14 InPortConnector TRACE    : read()
+Feb 13 12:33:14 Torque DEBUG    : data read succeeded
+Feb 13 12:33:14 Time TRACE    : isNew()
+Feb 13 12:33:14 Time DEBUG    : no connectors
+Feb 13 12:33:14 Move TRACE    : isNew()
+Feb 13 12:33:14 Move DEBUG    : isNew() = true, readable data: 1
+Feb 13 12:33:14 Move TRACE    : DataType read()
+Feb 13 12:33:14 InPortConnector TRACE    : read()
+Feb 13 12:33:14 Move DEBUG    : data read succeeded
+Feb 13 12:33:15 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:15 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:15 Angle TRACE    : DataType write()
+Feb 13 12:33:15 Load TRACE    : DataType write()
+Feb 13 12:33:15 Speed TRACE    : DataType write()
+Feb 13 12:33:15 Temperature TRACE    : DataType write()
+Feb 13 12:33:15 Voltage TRACE    : DataType write()
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:15 Torque TRACE    : isNew()
+Feb 13 12:33:15 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:15 Time TRACE    : isNew()
+Feb 13 12:33:15 Time DEBUG    : no connectors
+Feb 13 12:33:15 Move TRACE    : isNew()
+Feb 13 12:33:15 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:15 Torque TRACE    : get_port_profile()
+Feb 13 12:33:15 Move TRACE    : get_port_profile()
+Feb 13 12:33:15 Time TRACE    : get_port_profile()
+Feb 13 12:33:15 Angle TRACE    : get_port_profile()
+Feb 13 12:33:15 Load TRACE    : get_port_profile()
+Feb 13 12:33:15 Speed TRACE    : get_port_profile()
+Feb 13 12:33:15 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:15 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:15 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:15 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:15 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:15 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:15 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:15 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:15 Angle TRACE    : DataType write()
+Feb 13 12:33:15 Load TRACE    : DataType write()
+Feb 13 12:33:15 Speed TRACE    : DataType write()
+Feb 13 12:33:15 Temperature TRACE    : DataType write()
+Feb 13 12:33:15 Voltage TRACE    : DataType write()
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:15 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:15 Torque TRACE    : isNew()
+Feb 13 12:33:15 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:15 Time TRACE    : isNew()
+Feb 13 12:33:15 Time DEBUG    : no connectors
+Feb 13 12:33:15 Move TRACE    : isNew()
+Feb 13 12:33:15 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:16 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:16 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:16 Angle TRACE    : DataType write()
+Feb 13 12:33:16 Load TRACE    : DataType write()
+Feb 13 12:33:16 Speed TRACE    : DataType write()
+Feb 13 12:33:16 Temperature TRACE    : DataType write()
+Feb 13 12:33:16 Voltage TRACE    : DataType write()
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:16 Torque TRACE    : isNew()
+Feb 13 12:33:16 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:16 Time TRACE    : isNew()
+Feb 13 12:33:16 Time DEBUG    : no connectors
+Feb 13 12:33:16 Move TRACE    : isNew()
+Feb 13 12:33:16 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:16 Torque TRACE    : get_port_profile()
+Feb 13 12:33:16 Move TRACE    : get_port_profile()
+Feb 13 12:33:16 Time TRACE    : get_port_profile()
+Feb 13 12:33:16 Angle TRACE    : get_port_profile()
+Feb 13 12:33:16 Load TRACE    : get_port_profile()
+Feb 13 12:33:16 Speed TRACE    : get_port_profile()
+Feb 13 12:33:16 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:16 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:16 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:16 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:16 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:16 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:16 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:16 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:16 Angle TRACE    : DataType write()
+Feb 13 12:33:16 Load TRACE    : DataType write()
+Feb 13 12:33:16 Speed TRACE    : DataType write()
+Feb 13 12:33:16 Temperature TRACE    : DataType write()
+Feb 13 12:33:16 Voltage TRACE    : DataType write()
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:16 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:16 Torque TRACE    : isNew()
+Feb 13 12:33:16 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:16 Time TRACE    : isNew()
+Feb 13 12:33:16 Time DEBUG    : no connectors
+Feb 13 12:33:16 Move TRACE    : isNew()
+Feb 13 12:33:16 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:17 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:17 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:17 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:17 Torque TRACE    : get_port_profile()
+Feb 13 12:33:17 Move TRACE    : get_port_profile()
+Feb 13 12:33:17 Time TRACE    : get_port_profile()
+Feb 13 12:33:17 Angle TRACE    : get_port_profile()
+Feb 13 12:33:17 Load TRACE    : get_port_profile()
+Feb 13 12:33:17 Speed TRACE    : get_port_profile()
+Feb 13 12:33:17 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:17 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:17 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:17 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:17 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:17 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:17 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:17 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:17 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:17 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:17 Angle TRACE    : DataType write()
+Feb 13 12:33:17 Load TRACE    : DataType write()
+Feb 13 12:33:17 Speed TRACE    : DataType write()
+Feb 13 12:33:17 Temperature TRACE    : DataType write()
+Feb 13 12:33:17 Voltage TRACE    : DataType write()
+Feb 13 12:33:17 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:17 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:17 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:17 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:17 Torque TRACE    : isNew()
+Feb 13 12:33:17 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:17 Time TRACE    : isNew()
+Feb 13 12:33:17 Time DEBUG    : no connectors
+Feb 13 12:33:17 Move TRACE    : isNew()
+Feb 13 12:33:17 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:18 Angle TRACE    : DataType write()
+Feb 13 12:33:18 Load TRACE    : DataType write()
+Feb 13 12:33:18 Speed TRACE    : DataType write()
+Feb 13 12:33:18 Temperature TRACE    : DataType write()
+Feb 13 12:33:18 Voltage TRACE    : DataType write()
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:18 Manager TRACE    : Manager.shutdownOnNoRtcs()
+Feb 13 12:33:18 Manager TRACE    : Manager.getComponents()
+Feb 13 12:33:18 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:18 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:18 Torque TRACE    : isNew()
+Feb 13 12:33:18 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:18 Time TRACE    : isNew()
+Feb 13 12:33:18 Time DEBUG    : no connectors
+Feb 13 12:33:18 Move TRACE    : isNew()
+Feb 13 12:33:18 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:18 NamingManager TRACE    : NamingManager.update()
+Feb 13 12:33:18 NamingOnCorba TRACE    : isAlive()
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:18 Torque TRACE    : get_port_profile()
+Feb 13 12:33:18 Move TRACE    : get_port_profile()
+Feb 13 12:33:18 Time TRACE    : get_port_profile()
+Feb 13 12:33:18 Angle TRACE    : get_port_profile()
+Feb 13 12:33:18 Load TRACE    : get_port_profile()
+Feb 13 12:33:18 Speed TRACE    : get_port_profile()
+Feb 13 12:33:18 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:18 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:18 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:18 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:18 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:18 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:18 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:18 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:18 Angle TRACE    : DataType write()
+Feb 13 12:33:18 Load TRACE    : DataType write()
+Feb 13 12:33:18 Speed TRACE    : DataType write()
+Feb 13 12:33:18 Temperature TRACE    : DataType write()
+Feb 13 12:33:18 Voltage TRACE    : DataType write()
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:18 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:18 Torque TRACE    : isNew()
+Feb 13 12:33:18 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:18 Time TRACE    : isNew()
+Feb 13 12:33:18 Time DEBUG    : no connectors
+Feb 13 12:33:18 Move TRACE    : isNew()
+Feb 13 12:33:18 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:19 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:19 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:19 Angle TRACE    : DataType write()
+Feb 13 12:33:19 Load TRACE    : DataType write()
+Feb 13 12:33:19 Speed TRACE    : DataType write()
+Feb 13 12:33:19 Temperature TRACE    : DataType write()
+Feb 13 12:33:19 Voltage TRACE    : DataType write()
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:19 Torque TRACE    : isNew()
+Feb 13 12:33:19 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:19 Time TRACE    : isNew()
+Feb 13 12:33:19 Time DEBUG    : no connectors
+Feb 13 12:33:19 Move TRACE    : isNew()
+Feb 13 12:33:19 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:19 Torque TRACE    : get_port_profile()
+Feb 13 12:33:19 Move TRACE    : get_port_profile()
+Feb 13 12:33:19 Time TRACE    : get_port_profile()
+Feb 13 12:33:19 Angle TRACE    : get_port_profile()
+Feb 13 12:33:19 Load TRACE    : get_port_profile()
+Feb 13 12:33:19 Speed TRACE    : get_port_profile()
+Feb 13 12:33:19 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:19 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:19 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:19 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:19 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:19 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:19 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:19 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:19 Angle TRACE    : DataType write()
+Feb 13 12:33:19 Load TRACE    : DataType write()
+Feb 13 12:33:19 Speed TRACE    : DataType write()
+Feb 13 12:33:19 Temperature TRACE    : DataType write()
+Feb 13 12:33:19 Voltage TRACE    : DataType write()
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:19 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:19 Torque TRACE    : isNew()
+Feb 13 12:33:19 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:19 Time TRACE    : isNew()
+Feb 13 12:33:19 Time DEBUG    : no connectors
+Feb 13 12:33:19 Move TRACE    : isNew()
+Feb 13 12:33:19 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:20 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:20 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:20 Torque TRACE    : get_port_profile()
+Feb 13 12:33:20 Move TRACE    : get_port_profile()
+Feb 13 12:33:20 Angle TRACE    : DataType write()
+Feb 13 12:33:20 Load TRACE    : DataType write()
+Feb 13 12:33:20 Speed TRACE    : DataType write()
+Feb 13 12:33:20 Time TRACE    : get_port_profile()
+Feb 13 12:33:20 Temperature TRACE    : DataType write()
+Feb 13 12:33:20 Voltage TRACE    : DataType write()
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:20 Angle TRACE    : get_port_profile()
+Feb 13 12:33:20 Load TRACE    : get_port_profile()
+Feb 13 12:33:20 Speed TRACE    : get_port_profile()
+Feb 13 12:33:20 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:20 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:20 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:20 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:20 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:20 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:20 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:20 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:20 Torque TRACE    : isNew()
+Feb 13 12:33:20 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:20 Time TRACE    : isNew()
+Feb 13 12:33:20 Time DEBUG    : no connectors
+Feb 13 12:33:20 Move TRACE    : isNew()
+Feb 13 12:33:20 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:20 Angle TRACE    : DataType write()
+Feb 13 12:33:20 Load TRACE    : DataType write()
+Feb 13 12:33:20 Speed TRACE    : DataType write()
+Feb 13 12:33:20 Temperature TRACE    : DataType write()
+Feb 13 12:33:20 Voltage TRACE    : DataType write()
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:20 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:20 Torque TRACE    : isNew()
+Feb 13 12:33:20 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:20 Time TRACE    : isNew()
+Feb 13 12:33:20 Time DEBUG    : no connectors
+Feb 13 12:33:20 Move TRACE    : isNew()
+Feb 13 12:33:20 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:21 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:21 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:21 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:21 Torque TRACE    : get_port_profile()
+Feb 13 12:33:21 Move TRACE    : get_port_profile()
+Feb 13 12:33:21 Time TRACE    : get_port_profile()
+Feb 13 12:33:21 Angle TRACE    : get_port_profile()
+Feb 13 12:33:21 Load TRACE    : get_port_profile()
+Feb 13 12:33:21 Speed TRACE    : get_port_profile()
+Feb 13 12:33:21 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:21 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:21 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:21 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:21 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:21 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:21 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:21 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:21 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:21 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:21 Angle TRACE    : DataType write()
+Feb 13 12:33:21 Load TRACE    : DataType write()
+Feb 13 12:33:21 Speed TRACE    : DataType write()
+Feb 13 12:33:21 Temperature TRACE    : DataType write()
+Feb 13 12:33:21 Voltage TRACE    : DataType write()
+Feb 13 12:33:21 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:21 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:21 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:21 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:21 Torque TRACE    : isNew()
+Feb 13 12:33:21 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:21 Time TRACE    : isNew()
+Feb 13 12:33:21 Time DEBUG    : no connectors
+Feb 13 12:33:21 Move TRACE    : isNew()
+Feb 13 12:33:21 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:22 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:22 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:22 Angle TRACE    : DataType write()
+Feb 13 12:33:22 Load TRACE    : DataType write()
+Feb 13 12:33:22 Speed TRACE    : DataType write()
+Feb 13 12:33:22 Temperature TRACE    : DataType write()
+Feb 13 12:33:22 Voltage TRACE    : DataType write()
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:22 Torque TRACE    : isNew()
+Feb 13 12:33:22 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:22 Time TRACE    : isNew()
+Feb 13 12:33:22 Time DEBUG    : no connectors
+Feb 13 12:33:22 Move TRACE    : isNew()
+Feb 13 12:33:22 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:22 Torque TRACE    : get_port_profile()
+Feb 13 12:33:22 Move TRACE    : get_port_profile()
+Feb 13 12:33:22 Time TRACE    : get_port_profile()
+Feb 13 12:33:22 Angle TRACE    : get_port_profile()
+Feb 13 12:33:22 Load TRACE    : get_port_profile()
+Feb 13 12:33:22 Speed TRACE    : get_port_profile()
+Feb 13 12:33:22 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:22 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:22 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:22 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:22 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:22 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:22 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:22 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:22 Angle TRACE    : DataType write()
+Feb 13 12:33:22 Load TRACE    : DataType write()
+Feb 13 12:33:22 Speed TRACE    : DataType write()
+Feb 13 12:33:22 Temperature TRACE    : DataType write()
+Feb 13 12:33:22 Voltage TRACE    : DataType write()
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:22 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:22 Torque TRACE    : isNew()
+Feb 13 12:33:22 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:22 Time TRACE    : isNew()
+Feb 13 12:33:22 Time DEBUG    : no connectors
+Feb 13 12:33:22 Move TRACE    : isNew()
+Feb 13 12:33:22 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:23 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:23 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:23 Angle TRACE    : DataType write()
+Feb 13 12:33:23 Load TRACE    : DataType write()
+Feb 13 12:33:23 Speed TRACE    : DataType write()
+Feb 13 12:33:23 Temperature TRACE    : DataType write()
+Feb 13 12:33:23 Voltage TRACE    : DataType write()
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:23 Torque TRACE    : isNew()
+Feb 13 12:33:23 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:23 Time TRACE    : isNew()
+Feb 13 12:33:23 Time DEBUG    : no connectors
+Feb 13 12:33:23 Move TRACE    : isNew()
+Feb 13 12:33:23 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:23 Torque TRACE    : get_port_profile()
+Feb 13 12:33:23 Move TRACE    : get_port_profile()
+Feb 13 12:33:23 Time TRACE    : get_port_profile()
+Feb 13 12:33:23 Angle TRACE    : get_port_profile()
+Feb 13 12:33:23 Load TRACE    : get_port_profile()
+Feb 13 12:33:23 Speed TRACE    : get_port_profile()
+Feb 13 12:33:23 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:23 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:23 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:23 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:23 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:23 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:23 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:23 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:23 Angle TRACE    : DataType write()
+Feb 13 12:33:23 Load TRACE    : DataType write()
+Feb 13 12:33:23 Speed TRACE    : DataType write()
+Feb 13 12:33:23 Temperature TRACE    : DataType write()
+Feb 13 12:33:23 Voltage TRACE    : DataType write()
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:23 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:23 Torque TRACE    : isNew()
+Feb 13 12:33:23 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:23 Time TRACE    : isNew()
+Feb 13 12:33:23 Time DEBUG    : no connectors
+Feb 13 12:33:23 Move TRACE    : isNew()
+Feb 13 12:33:23 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:24 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:24 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:24 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:24 Torque TRACE    : get_port_profile()
+Feb 13 12:33:24 Move TRACE    : get_port_profile()
+Feb 13 12:33:24 Time TRACE    : get_port_profile()
+Feb 13 12:33:24 Angle TRACE    : get_port_profile()
+Feb 13 12:33:24 Load TRACE    : get_port_profile()
+Feb 13 12:33:24 Speed TRACE    : get_port_profile()
+Feb 13 12:33:24 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:24 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:24 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:24 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:24 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:24 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:24 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:24 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:24 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:24 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:24 Angle TRACE    : DataType write()
+Feb 13 12:33:24 Load TRACE    : DataType write()
+Feb 13 12:33:24 Speed TRACE    : DataType write()
+Feb 13 12:33:24 Temperature TRACE    : DataType write()
+Feb 13 12:33:24 Voltage TRACE    : DataType write()
+Feb 13 12:33:24 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:24 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:24 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:24 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:24 Torque TRACE    : isNew()
+Feb 13 12:33:24 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:24 Time TRACE    : isNew()
+Feb 13 12:33:24 Time DEBUG    : no connectors
+Feb 13 12:33:24 Move TRACE    : isNew()
+Feb 13 12:33:24 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:25 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:25 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:25 Angle TRACE    : DataType write()
+Feb 13 12:33:25 Load TRACE    : DataType write()
+Feb 13 12:33:25 Speed TRACE    : DataType write()
+Feb 13 12:33:25 Temperature TRACE    : DataType write()
+Feb 13 12:33:25 Voltage TRACE    : DataType write()
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:25 Torque TRACE    : isNew()
+Feb 13 12:33:25 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:25 Time TRACE    : isNew()
+Feb 13 12:33:25 Time DEBUG    : no connectors
+Feb 13 12:33:25 Move TRACE    : isNew()
+Feb 13 12:33:25 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:25 Torque TRACE    : get_port_profile()
+Feb 13 12:33:25 Move TRACE    : get_port_profile()
+Feb 13 12:33:25 Time TRACE    : get_port_profile()
+Feb 13 12:33:25 Angle TRACE    : get_port_profile()
+Feb 13 12:33:25 Load TRACE    : get_port_profile()
+Feb 13 12:33:25 Speed TRACE    : get_port_profile()
+Feb 13 12:33:25 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:25 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:25 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:25 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:25 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:25 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:25 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:25 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:25 Angle TRACE    : DataType write()
+Feb 13 12:33:25 Load TRACE    : DataType write()
+Feb 13 12:33:25 Speed TRACE    : DataType write()
+Feb 13 12:33:25 Temperature TRACE    : DataType write()
+Feb 13 12:33:25 Voltage TRACE    : DataType write()
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:25 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:25 Torque TRACE    : isNew()
+Feb 13 12:33:25 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:25 Time TRACE    : isNew()
+Feb 13 12:33:25 Time DEBUG    : no connectors
+Feb 13 12:33:25 Move TRACE    : isNew()
+Feb 13 12:33:25 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:26 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:26 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:26 Angle TRACE    : DataType write()
+Feb 13 12:33:26 Load TRACE    : DataType write()
+Feb 13 12:33:26 Speed TRACE    : DataType write()
+Feb 13 12:33:26 Temperature TRACE    : DataType write()
+Feb 13 12:33:26 Voltage TRACE    : DataType write()
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:26 Torque TRACE    : isNew()
+Feb 13 12:33:26 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:26 Time TRACE    : isNew()
+Feb 13 12:33:26 Time DEBUG    : no connectors
+Feb 13 12:33:26 Move TRACE    : isNew()
+Feb 13 12:33:26 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:26 Torque TRACE    : get_port_profile()
+Feb 13 12:33:26 Move TRACE    : get_port_profile()
+Feb 13 12:33:26 Time TRACE    : get_port_profile()
+Feb 13 12:33:26 Angle TRACE    : get_port_profile()
+Feb 13 12:33:26 Load TRACE    : get_port_profile()
+Feb 13 12:33:26 Speed TRACE    : get_port_profile()
+Feb 13 12:33:26 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:26 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:26 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:26 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:26 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:26 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:26 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:26 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:26 Angle TRACE    : DataType write()
+Feb 13 12:33:26 Load TRACE    : DataType write()
+Feb 13 12:33:26 Speed TRACE    : DataType write()
+Feb 13 12:33:26 Temperature TRACE    : DataType write()
+Feb 13 12:33:26 Voltage TRACE    : DataType write()
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:26 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:26 Torque TRACE    : isNew()
+Feb 13 12:33:26 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:26 Time TRACE    : isNew()
+Feb 13 12:33:26 Time DEBUG    : no connectors
+Feb 13 12:33:26 Move TRACE    : isNew()
+Feb 13 12:33:26 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:26 InPortCorbaCdrProvider PARANOID : InPortCorbaCdrProvider.put()
+Feb 13 12:33:26 InPortCorbaCdrProvider PARANOID : received data size: 14
+Feb 13 12:33:26 InPortCorbaCdrProvider PARANOID : converted CDR data size: 14
+Feb 13 12:33:26 InPortCorbaCdrProvider PARANOID : InPortCorbaCdrProvider.put()
+Feb 13 12:33:26 InPortCorbaCdrProvider PARANOID : received data size: 20
+Feb 13 12:33:26 InPortCorbaCdrProvider PARANOID : converted CDR data size: 20
+Feb 13 12:33:27 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:27 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:27 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:27 Torque TRACE    : get_port_profile()
+Feb 13 12:33:27 Move TRACE    : get_port_profile()
+Feb 13 12:33:27 Time TRACE    : get_port_profile()
+Feb 13 12:33:27 Angle TRACE    : get_port_profile()
+Feb 13 12:33:27 Load TRACE    : get_port_profile()
+Feb 13 12:33:27 Speed TRACE    : get_port_profile()
+Feb 13 12:33:27 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:27 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:27 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:27 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:27 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:27 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:27 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:27 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:27 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:27 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:27 Angle TRACE    : DataType write()
+Feb 13 12:33:27 Load TRACE    : DataType write()
+Feb 13 12:33:27 Speed TRACE    : DataType write()
+Feb 13 12:33:27 Temperature TRACE    : DataType write()
+Feb 13 12:33:27 Voltage TRACE    : DataType write()
+Feb 13 12:33:27 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:27 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:27 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:27 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:27 Torque TRACE    : isNew()
+Feb 13 12:33:27 Torque DEBUG    : isNew() = true, readable data: 1
+Feb 13 12:33:27 Torque TRACE    : DataType read()
+Feb 13 12:33:27 InPortConnector TRACE    : read()
+Feb 13 12:33:27 Torque DEBUG    : data read succeeded
+Feb 13 12:33:27 Time TRACE    : isNew()
+Feb 13 12:33:27 Time DEBUG    : no connectors
+Feb 13 12:33:27 Move TRACE    : isNew()
+Feb 13 12:33:27 Move DEBUG    : isNew() = true, readable data: 1
+Feb 13 12:33:27 Move TRACE    : DataType read()
+Feb 13 12:33:27 InPortConnector TRACE    : read()
+Feb 13 12:33:27 Move DEBUG    : data read succeeded
+Feb 13 12:33:28 Angle TRACE    : DataType write()
+Feb 13 12:33:28 Load TRACE    : DataType write()
+Feb 13 12:33:28 Speed TRACE    : DataType write()
+Feb 13 12:33:28 Temperature TRACE    : DataType write()
+Feb 13 12:33:28 Voltage TRACE    : DataType write()
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:28 Manager TRACE    : Manager.shutdownOnNoRtcs()
+Feb 13 12:33:28 Manager TRACE    : Manager.getComponents()
+Feb 13 12:33:28 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:28 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:28 Torque TRACE    : isNew()
+Feb 13 12:33:28 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:28 Time TRACE    : isNew()
+Feb 13 12:33:28 Time DEBUG    : no connectors
+Feb 13 12:33:28 Move TRACE    : isNew()
+Feb 13 12:33:28 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:28 NamingManager TRACE    : NamingManager.update()
+Feb 13 12:33:28 NamingOnCorba TRACE    : isAlive()
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:28 Torque TRACE    : get_port_profile()
+Feb 13 12:33:28 Move TRACE    : get_port_profile()
+Feb 13 12:33:28 Time TRACE    : get_port_profile()
+Feb 13 12:33:28 Angle TRACE    : get_port_profile()
+Feb 13 12:33:28 Load TRACE    : get_port_profile()
+Feb 13 12:33:28 Speed TRACE    : get_port_profile()
+Feb 13 12:33:28 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:28 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:28 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:28 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:28 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:28 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:28 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:28 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:28 Angle TRACE    : DataType write()
+Feb 13 12:33:28 Load TRACE    : DataType write()
+Feb 13 12:33:28 Speed TRACE    : DataType write()
+Feb 13 12:33:28 Temperature TRACE    : DataType write()
+Feb 13 12:33:28 Voltage TRACE    : DataType write()
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:28 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:28 Torque TRACE    : isNew()
+Feb 13 12:33:28 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:28 Time TRACE    : isNew()
+Feb 13 12:33:28 Time DEBUG    : no connectors
+Feb 13 12:33:28 Move TRACE    : isNew()
+Feb 13 12:33:28 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:29 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:29 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:29 Angle TRACE    : DataType write()
+Feb 13 12:33:29 Load TRACE    : DataType write()
+Feb 13 12:33:29 Speed TRACE    : DataType write()
+Feb 13 12:33:29 Temperature TRACE    : DataType write()
+Feb 13 12:33:29 Voltage TRACE    : DataType write()
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:29 Torque TRACE    : isNew()
+Feb 13 12:33:29 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:29 Time TRACE    : isNew()
+Feb 13 12:33:29 Time DEBUG    : no connectors
+Feb 13 12:33:29 Move TRACE    : isNew()
+Feb 13 12:33:29 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:29 Torque TRACE    : get_port_profile()
+Feb 13 12:33:29 Move TRACE    : get_port_profile()
+Feb 13 12:33:29 Time TRACE    : get_port_profile()
+Feb 13 12:33:29 Angle TRACE    : get_port_profile()
+Feb 13 12:33:29 Load TRACE    : get_port_profile()
+Feb 13 12:33:29 Speed TRACE    : get_port_profile()
+Feb 13 12:33:29 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:29 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:29 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:29 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:29 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:29 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:29 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:29 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:29 Angle TRACE    : DataType write()
+Feb 13 12:33:29 Load TRACE    : DataType write()
+Feb 13 12:33:29 Speed TRACE    : DataType write()
+Feb 13 12:33:29 Temperature TRACE    : DataType write()
+Feb 13 12:33:29 Voltage TRACE    : DataType write()
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:29 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:29 Torque TRACE    : isNew()
+Feb 13 12:33:29 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:29 Time TRACE    : isNew()
+Feb 13 12:33:29 Time DEBUG    : no connectors
+Feb 13 12:33:29 Move TRACE    : isNew()
+Feb 13 12:33:29 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:30 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:30 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:30 Torque TRACE    : get_port_profile()
+Feb 13 12:33:30 Move TRACE    : get_port_profile()
+Feb 13 12:33:30 Time TRACE    : get_port_profile()
+Feb 13 12:33:30 Angle TRACE    : get_port_profile()
+Feb 13 12:33:30 Load TRACE    : get_port_profile()
+Feb 13 12:33:30 Speed TRACE    : get_port_profile()
+Feb 13 12:33:30 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:30 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:30 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:30 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:30 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:30 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:30 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:30 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:30 Angle TRACE    : DataType write()
+Feb 13 12:33:30 Load TRACE    : DataType write()
+Feb 13 12:33:30 Speed TRACE    : DataType write()
+Feb 13 12:33:30 Temperature TRACE    : DataType write()
+Feb 13 12:33:30 Voltage TRACE    : DataType write()
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:30 Torque TRACE    : isNew()
+Feb 13 12:33:30 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:30 Time TRACE    : isNew()
+Feb 13 12:33:30 Time DEBUG    : no connectors
+Feb 13 12:33:30 Move TRACE    : isNew()
+Feb 13 12:33:30 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:30 Angle TRACE    : DataType write()
+Feb 13 12:33:30 Load TRACE    : DataType write()
+Feb 13 12:33:30 Speed TRACE    : DataType write()
+Feb 13 12:33:30 Temperature TRACE    : DataType write()
+Feb 13 12:33:30 Voltage TRACE    : DataType write()
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:30 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:31 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:31 Torque TRACE    : isNew()
+Feb 13 12:33:31 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:31 Time TRACE    : isNew()
+Feb 13 12:33:31 Time DEBUG    : no connectors
+Feb 13 12:33:31 Move TRACE    : isNew()
+Feb 13 12:33:31 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:31 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:31 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:31 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:31 Torque TRACE    : get_port_profile()
+Feb 13 12:33:31 Move TRACE    : get_port_profile()
+Feb 13 12:33:31 Time TRACE    : get_port_profile()
+Feb 13 12:33:31 Angle TRACE    : get_port_profile()
+Feb 13 12:33:31 Load TRACE    : get_port_profile()
+Feb 13 12:33:31 Speed TRACE    : get_port_profile()
+Feb 13 12:33:31 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:31 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:31 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:31 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:31 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:31 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:31 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:31 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:31 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:31 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:31 Angle TRACE    : DataType write()
+Feb 13 12:33:31 Load TRACE    : DataType write()
+Feb 13 12:33:31 Speed TRACE    : DataType write()
+Feb 13 12:33:31 Temperature TRACE    : DataType write()
+Feb 13 12:33:31 Voltage TRACE    : DataType write()
+Feb 13 12:33:31 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:31 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:31 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:31 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:31 Torque TRACE    : isNew()
+Feb 13 12:33:31 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:31 Time TRACE    : isNew()
+Feb 13 12:33:31 Time DEBUG    : no connectors
+Feb 13 12:33:31 Move TRACE    : isNew()
+Feb 13 12:33:31 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:32 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:32 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:32 Angle TRACE    : DataType write()
+Feb 13 12:33:32 Load TRACE    : DataType write()
+Feb 13 12:33:32 Speed TRACE    : DataType write()
+Feb 13 12:33:32 Temperature TRACE    : DataType write()
+Feb 13 12:33:32 Voltage TRACE    : DataType write()
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:32 Torque TRACE    : isNew()
+Feb 13 12:33:32 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:32 Time TRACE    : isNew()
+Feb 13 12:33:32 Time DEBUG    : no connectors
+Feb 13 12:33:32 Move TRACE    : isNew()
+Feb 13 12:33:32 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:32 Torque TRACE    : get_port_profile()
+Feb 13 12:33:32 Move TRACE    : get_port_profile()
+Feb 13 12:33:32 Time TRACE    : get_port_profile()
+Feb 13 12:33:32 Angle TRACE    : get_port_profile()
+Feb 13 12:33:32 Load TRACE    : get_port_profile()
+Feb 13 12:33:32 Speed TRACE    : get_port_profile()
+Feb 13 12:33:32 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:32 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:32 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:32 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:32 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:32 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:32 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:32 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:32 Angle TRACE    : DataType write()
+Feb 13 12:33:32 Load TRACE    : DataType write()
+Feb 13 12:33:32 Speed TRACE    : DataType write()
+Feb 13 12:33:32 Temperature TRACE    : DataType write()
+Feb 13 12:33:32 Voltage TRACE    : DataType write()
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:32 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:32 Torque TRACE    : isNew()
+Feb 13 12:33:32 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:32 Time TRACE    : isNew()
+Feb 13 12:33:32 Time DEBUG    : no connectors
+Feb 13 12:33:32 Move TRACE    : isNew()
+Feb 13 12:33:32 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:33 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:33 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:33 Angle TRACE    : DataType write()
+Feb 13 12:33:33 Load TRACE    : DataType write()
+Feb 13 12:33:33 Speed TRACE    : DataType write()
+Feb 13 12:33:33 Temperature TRACE    : DataType write()
+Feb 13 12:33:33 Voltage TRACE    : DataType write()
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:33 Torque TRACE    : get_port_profile()
+Feb 13 12:33:33 Move TRACE    : get_port_profile()
+Feb 13 12:33:33 Time TRACE    : get_port_profile()
+Feb 13 12:33:33 Angle TRACE    : get_port_profile()
+Feb 13 12:33:33 Load TRACE    : get_port_profile()
+Feb 13 12:33:33 Speed TRACE    : get_port_profile()
+Feb 13 12:33:33 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:33 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:33 Torque TRACE    : isNew()
+Feb 13 12:33:33 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:33 Time TRACE    : isNew()
+Feb 13 12:33:33 Time DEBUG    : no connectors
+Feb 13 12:33:33 Move TRACE    : isNew()
+Feb 13 12:33:33 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:33 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:33 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:33 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:33 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:33 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:33 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:33 Angle TRACE    : DataType write()
+Feb 13 12:33:33 Load TRACE    : DataType write()
+Feb 13 12:33:33 Speed TRACE    : DataType write()
+Feb 13 12:33:33 Temperature TRACE    : DataType write()
+Feb 13 12:33:33 Voltage TRACE    : DataType write()
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:33 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:34 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:34 Torque TRACE    : isNew()
+Feb 13 12:33:34 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:34 Time TRACE    : isNew()
+Feb 13 12:33:34 Time DEBUG    : no connectors
+Feb 13 12:33:34 Move TRACE    : isNew()
+Feb 13 12:33:34 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:34 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:34 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:34 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:34 Torque TRACE    : get_port_profile()
+Feb 13 12:33:34 Move TRACE    : get_port_profile()
+Feb 13 12:33:34 Time TRACE    : get_port_profile()
+Feb 13 12:33:34 Angle TRACE    : get_port_profile()
+Feb 13 12:33:34 Load TRACE    : get_port_profile()
+Feb 13 12:33:34 Speed TRACE    : get_port_profile()
+Feb 13 12:33:34 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:34 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:34 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:34 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:34 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:34 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:34 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:34 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:34 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:34 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:34 Angle TRACE    : DataType write()
+Feb 13 12:33:34 Load TRACE    : DataType write()
+Feb 13 12:33:34 Speed TRACE    : DataType write()
+Feb 13 12:33:34 Temperature TRACE    : DataType write()
+Feb 13 12:33:34 Voltage TRACE    : DataType write()
+Feb 13 12:33:34 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:34 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:34 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:34 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:34 Torque TRACE    : isNew()
+Feb 13 12:33:34 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:34 Time TRACE    : isNew()
+Feb 13 12:33:34 Time DEBUG    : no connectors
+Feb 13 12:33:34 Move TRACE    : isNew()
+Feb 13 12:33:34 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:35 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:35 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:35 Angle TRACE    : DataType write()
+Feb 13 12:33:35 Load TRACE    : DataType write()
+Feb 13 12:33:35 Speed TRACE    : DataType write()
+Feb 13 12:33:35 Temperature TRACE    : DataType write()
+Feb 13 12:33:35 Voltage TRACE    : DataType write()
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:35 Torque TRACE    : isNew()
+Feb 13 12:33:35 Torque TRACE    : get_port_profile()
+Feb 13 12:33:35 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:35 Time TRACE    : isNew()
+Feb 13 12:33:35 Time DEBUG    : no connectors
+Feb 13 12:33:35 Move TRACE    : isNew()
+Feb 13 12:33:35 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:35 Move TRACE    : get_port_profile()
+Feb 13 12:33:35 Time TRACE    : get_port_profile()
+Feb 13 12:33:35 Angle TRACE    : get_port_profile()
+Feb 13 12:33:35 Load TRACE    : get_port_profile()
+Feb 13 12:33:35 Speed TRACE    : get_port_profile()
+Feb 13 12:33:35 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:35 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:35 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:35 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:35 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:35 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:35 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:35 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:35 Angle TRACE    : DataType write()
+Feb 13 12:33:35 Load TRACE    : DataType write()
+Feb 13 12:33:35 Speed TRACE    : DataType write()
+Feb 13 12:33:35 Temperature TRACE    : DataType write()
+Feb 13 12:33:35 Voltage TRACE    : DataType write()
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:35 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:36 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:36 Torque TRACE    : isNew()
+Feb 13 12:33:36 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:36 Time TRACE    : isNew()
+Feb 13 12:33:36 Time DEBUG    : no connectors
+Feb 13 12:33:36 Move TRACE    : isNew()
+Feb 13 12:33:36 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:36 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:36 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:36 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:36 Torque TRACE    : get_port_profile()
+Feb 13 12:33:36 Move TRACE    : get_port_profile()
+Feb 13 12:33:36 Time TRACE    : get_port_profile()
+Feb 13 12:33:36 Angle TRACE    : get_port_profile()
+Feb 13 12:33:36 Load TRACE    : get_port_profile()
+Feb 13 12:33:36 Speed TRACE    : get_port_profile()
+Feb 13 12:33:36 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:36 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:36 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:36 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:36 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:36 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:36 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:36 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:36 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:36 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:36 Angle TRACE    : DataType write()
+Feb 13 12:33:36 Load TRACE    : DataType write()
+Feb 13 12:33:36 Speed TRACE    : DataType write()
+Feb 13 12:33:36 Temperature TRACE    : DataType write()
+Feb 13 12:33:36 Voltage TRACE    : DataType write()
+Feb 13 12:33:36 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:36 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:36 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:36 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:36 Torque TRACE    : isNew()
+Feb 13 12:33:36 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:36 Time TRACE    : isNew()
+Feb 13 12:33:36 Time DEBUG    : no connectors
+Feb 13 12:33:36 Move TRACE    : isNew()
+Feb 13 12:33:36 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:37 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:37 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:37 Angle TRACE    : DataType write()
+Feb 13 12:33:37 Load TRACE    : DataType write()
+Feb 13 12:33:37 Speed TRACE    : DataType write()
+Feb 13 12:33:37 Temperature TRACE    : DataType write()
+Feb 13 12:33:37 Voltage TRACE    : DataType write()
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:37 Torque TRACE    : isNew()
+Feb 13 12:33:37 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:37 Time TRACE    : isNew()
+Feb 13 12:33:37 Time DEBUG    : no connectors
+Feb 13 12:33:37 Move TRACE    : isNew()
+Feb 13 12:33:37 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:37 Torque TRACE    : get_port_profile()
+Feb 13 12:33:37 Move TRACE    : get_port_profile()
+Feb 13 12:33:37 Time TRACE    : get_port_profile()
+Feb 13 12:33:37 Angle TRACE    : get_port_profile()
+Feb 13 12:33:37 Load TRACE    : get_port_profile()
+Feb 13 12:33:37 Speed TRACE    : get_port_profile()
+Feb 13 12:33:37 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:37 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:37 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:37 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:37 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:37 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:37 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:37 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:37 Angle TRACE    : DataType write()
+Feb 13 12:33:37 Load TRACE    : DataType write()
+Feb 13 12:33:37 Speed TRACE    : DataType write()
+Feb 13 12:33:37 Temperature TRACE    : DataType write()
+Feb 13 12:33:37 Voltage TRACE    : DataType write()
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:37 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:37 Torque TRACE    : isNew()
+Feb 13 12:33:37 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:37 Time TRACE    : isNew()
+Feb 13 12:33:37 Time DEBUG    : no connectors
+Feb 13 12:33:37 Move TRACE    : isNew()
+Feb 13 12:33:37 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:38 Manager TRACE    : Manager.shutdownOnNoRtcs()
+Feb 13 12:33:38 Manager TRACE    : Manager.getComponents()
+Feb 13 12:33:38 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:38 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:38 NamingManager TRACE    : NamingManager.update()
+Feb 13 12:33:38 NamingOnCorba TRACE    : isAlive()
+Feb 13 12:33:38 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:38 Torque TRACE    : get_port_profile()
+Feb 13 12:33:38 Move TRACE    : get_port_profile()
+Feb 13 12:33:38 Time TRACE    : get_port_profile()
+Feb 13 12:33:38 Angle TRACE    : get_port_profile()
+Feb 13 12:33:38 Load TRACE    : get_port_profile()
+Feb 13 12:33:38 Speed TRACE    : get_port_profile()
+Feb 13 12:33:38 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:38 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:38 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:38 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:38 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:38 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:38 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:38 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:38 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:38 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:38 Angle TRACE    : DataType write()
+Feb 13 12:33:38 Load TRACE    : DataType write()
+Feb 13 12:33:38 Speed TRACE    : DataType write()
+Feb 13 12:33:38 Temperature TRACE    : DataType write()
+Feb 13 12:33:38 Voltage TRACE    : DataType write()
+Feb 13 12:33:38 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:38 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:38 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:38 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:38 Torque TRACE    : isNew()
+Feb 13 12:33:38 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:38 Time TRACE    : isNew()
+Feb 13 12:33:38 Time DEBUG    : no connectors
+Feb 13 12:33:38 Move TRACE    : isNew()
+Feb 13 12:33:38 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:39 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:39 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:39 Angle TRACE    : DataType write()
+Feb 13 12:33:39 Load TRACE    : DataType write()
+Feb 13 12:33:39 Speed TRACE    : DataType write()
+Feb 13 12:33:39 Temperature TRACE    : DataType write()
+Feb 13 12:33:39 Voltage TRACE    : DataType write()
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:39 Torque TRACE    : isNew()
+Feb 13 12:33:39 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:39 Time TRACE    : isNew()
+Feb 13 12:33:39 Time DEBUG    : no connectors
+Feb 13 12:33:39 Move TRACE    : isNew()
+Feb 13 12:33:39 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:39 Torque TRACE    : get_port_profile()
+Feb 13 12:33:39 Move TRACE    : get_port_profile()
+Feb 13 12:33:39 Time TRACE    : get_port_profile()
+Feb 13 12:33:39 Angle TRACE    : get_port_profile()
+Feb 13 12:33:39 Load TRACE    : get_port_profile()
+Feb 13 12:33:39 Speed TRACE    : get_port_profile()
+Feb 13 12:33:39 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:39 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:39 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:39 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:39 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:39 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:39 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:39 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:39 Angle TRACE    : DataType write()
+Feb 13 12:33:39 Load TRACE    : DataType write()
+Feb 13 12:33:39 Speed TRACE    : DataType write()
+Feb 13 12:33:39 Temperature TRACE    : DataType write()
+Feb 13 12:33:39 Voltage TRACE    : DataType write()
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:39 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:39 Torque TRACE    : isNew()
+Feb 13 12:33:39 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:39 Time TRACE    : isNew()
+Feb 13 12:33:39 Time DEBUG    : no connectors
+Feb 13 12:33:39 Move TRACE    : isNew()
+Feb 13 12:33:39 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:40 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:40 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:40 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:40 Torque TRACE    : get_port_profile()
+Feb 13 12:33:40 Move TRACE    : get_port_profile()
+Feb 13 12:33:40 Time TRACE    : get_port_profile()
+Feb 13 12:33:40 Angle TRACE    : get_port_profile()
+Feb 13 12:33:40 Load TRACE    : get_port_profile()
+Feb 13 12:33:40 Speed TRACE    : get_port_profile()
+Feb 13 12:33:40 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:40 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:40 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:40 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:40 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:40 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:40 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:40 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:40 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:40 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:40 Angle TRACE    : DataType write()
+Feb 13 12:33:40 Load TRACE    : DataType write()
+Feb 13 12:33:40 Speed TRACE    : DataType write()
+Feb 13 12:33:40 Temperature TRACE    : DataType write()
+Feb 13 12:33:40 Voltage TRACE    : DataType write()
+Feb 13 12:33:40 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:40 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:40 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:40 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:40 Torque TRACE    : isNew()
+Feb 13 12:33:40 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:40 Time TRACE    : isNew()
+Feb 13 12:33:40 Time DEBUG    : no connectors
+Feb 13 12:33:40 Move TRACE    : isNew()
+Feb 13 12:33:40 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:41 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:41 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:41 Angle TRACE    : DataType write()
+Feb 13 12:33:41 Load TRACE    : DataType write()
+Feb 13 12:33:41 Speed TRACE    : DataType write()
+Feb 13 12:33:41 Temperature TRACE    : DataType write()
+Feb 13 12:33:41 Voltage TRACE    : DataType write()
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:41 Torque TRACE    : isNew()
+Feb 13 12:33:41 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:41 Time TRACE    : isNew()
+Feb 13 12:33:41 Time DEBUG    : no connectors
+Feb 13 12:33:41 Move TRACE    : isNew()
+Feb 13 12:33:41 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:41 Torque TRACE    : get_port_profile()
+Feb 13 12:33:41 Move TRACE    : get_port_profile()
+Feb 13 12:33:41 Time TRACE    : get_port_profile()
+Feb 13 12:33:41 Angle TRACE    : get_port_profile()
+Feb 13 12:33:41 Load TRACE    : get_port_profile()
+Feb 13 12:33:41 Speed TRACE    : get_port_profile()
+Feb 13 12:33:41 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:41 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:41 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:41 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:41 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:41 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:41 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:41 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:41 Angle TRACE    : DataType write()
+Feb 13 12:33:41 Load TRACE    : DataType write()
+Feb 13 12:33:41 Speed TRACE    : DataType write()
+Feb 13 12:33:41 Temperature TRACE    : DataType write()
+Feb 13 12:33:41 Voltage TRACE    : DataType write()
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:41 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:41 Torque TRACE    : isNew()
+Feb 13 12:33:41 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:41 Time TRACE    : isNew()
+Feb 13 12:33:41 Time DEBUG    : no connectors
+Feb 13 12:33:41 Move TRACE    : isNew()
+Feb 13 12:33:41 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:42 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:42 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:42 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:42 Torque TRACE    : get_port_profile()
+Feb 13 12:33:42 Move TRACE    : get_port_profile()
+Feb 13 12:33:42 Time TRACE    : get_port_profile()
+Feb 13 12:33:42 Angle TRACE    : get_port_profile()
+Feb 13 12:33:42 Load TRACE    : get_port_profile()
+Feb 13 12:33:42 Speed TRACE    : get_port_profile()
+Feb 13 12:33:42 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:42 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:42 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:42 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:42 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:42 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:42 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:42 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:42 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:42 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:42 Angle TRACE    : DataType write()
+Feb 13 12:33:42 Load TRACE    : DataType write()
+Feb 13 12:33:42 Speed TRACE    : DataType write()
+Feb 13 12:33:42 Temperature TRACE    : DataType write()
+Feb 13 12:33:42 Voltage TRACE    : DataType write()
+Feb 13 12:33:42 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:42 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:42 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:42 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:42 Torque TRACE    : isNew()
+Feb 13 12:33:42 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:42 Time TRACE    : isNew()
+Feb 13 12:33:42 Time DEBUG    : no connectors
+Feb 13 12:33:42 Move TRACE    : isNew()
+Feb 13 12:33:42 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:43 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:43 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:43 Angle TRACE    : DataType write()
+Feb 13 12:33:43 Load TRACE    : DataType write()
+Feb 13 12:33:43 Speed TRACE    : DataType write()
+Feb 13 12:33:43 Temperature TRACE    : DataType write()
+Feb 13 12:33:43 Voltage TRACE    : DataType write()
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:43 Torque TRACE    : isNew()
+Feb 13 12:33:43 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:43 Time TRACE    : isNew()
+Feb 13 12:33:43 Time DEBUG    : no connectors
+Feb 13 12:33:43 Move TRACE    : isNew()
+Feb 13 12:33:43 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:43 Torque TRACE    : get_port_profile()
+Feb 13 12:33:43 Move TRACE    : get_port_profile()
+Feb 13 12:33:43 Time TRACE    : get_port_profile()
+Feb 13 12:33:43 Angle TRACE    : get_port_profile()
+Feb 13 12:33:43 Load TRACE    : get_port_profile()
+Feb 13 12:33:43 Speed TRACE    : get_port_profile()
+Feb 13 12:33:43 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:43 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:43 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:43 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:43 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:43 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:43 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:43 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:43 Angle TRACE    : DataType write()
+Feb 13 12:33:43 Load TRACE    : DataType write()
+Feb 13 12:33:43 Speed TRACE    : DataType write()
+Feb 13 12:33:43 Temperature TRACE    : DataType write()
+Feb 13 12:33:43 Voltage TRACE    : DataType write()
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:43 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:43 Torque TRACE    : isNew()
+Feb 13 12:33:43 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:43 Time TRACE    : isNew()
+Feb 13 12:33:43 Time DEBUG    : no connectors
+Feb 13 12:33:43 Move TRACE    : isNew()
+Feb 13 12:33:43 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:44 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:44 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:44 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:44 Torque TRACE    : get_port_profile()
+Feb 13 12:33:44 Move TRACE    : get_port_profile()
+Feb 13 12:33:44 Time TRACE    : get_port_profile()
+Feb 13 12:33:44 Angle TRACE    : get_port_profile()
+Feb 13 12:33:44 Load TRACE    : get_port_profile()
+Feb 13 12:33:44 Speed TRACE    : get_port_profile()
+Feb 13 12:33:44 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:44 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:44 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:44 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:44 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:44 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:44 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:44 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:44 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:44 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:44 Angle TRACE    : DataType write()
+Feb 13 12:33:44 Load TRACE    : DataType write()
+Feb 13 12:33:44 Speed TRACE    : DataType write()
+Feb 13 12:33:44 Temperature TRACE    : DataType write()
+Feb 13 12:33:44 Voltage TRACE    : DataType write()
+Feb 13 12:33:44 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:44 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:44 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:44 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:44 Torque TRACE    : isNew()
+Feb 13 12:33:44 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:44 Time TRACE    : isNew()
+Feb 13 12:33:44 Time DEBUG    : no connectors
+Feb 13 12:33:44 Move TRACE    : isNew()
+Feb 13 12:33:44 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:45 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:45 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:45 Angle TRACE    : DataType write()
+Feb 13 12:33:45 Load TRACE    : DataType write()
+Feb 13 12:33:45 Speed TRACE    : DataType write()
+Feb 13 12:33:45 Temperature TRACE    : DataType write()
+Feb 13 12:33:45 Voltage TRACE    : DataType write()
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:45 Torque TRACE    : isNew()
+Feb 13 12:33:45 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:45 Time TRACE    : isNew()
+Feb 13 12:33:45 Time DEBUG    : no connectors
+Feb 13 12:33:45 Move TRACE    : isNew()
+Feb 13 12:33:45 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:45 Torque TRACE    : get_port_profile()
+Feb 13 12:33:45 Move TRACE    : get_port_profile()
+Feb 13 12:33:45 Time TRACE    : get_port_profile()
+Feb 13 12:33:45 Angle TRACE    : get_port_profile()
+Feb 13 12:33:45 Load TRACE    : get_port_profile()
+Feb 13 12:33:45 Speed TRACE    : get_port_profile()
+Feb 13 12:33:45 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:45 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:45 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:45 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:45 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:45 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:45 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:45 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:45 Angle TRACE    : DataType write()
+Feb 13 12:33:45 Load TRACE    : DataType write()
+Feb 13 12:33:45 Speed TRACE    : DataType write()
+Feb 13 12:33:45 Temperature TRACE    : DataType write()
+Feb 13 12:33:45 Voltage TRACE    : DataType write()
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:45 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:45 Torque TRACE    : isNew()
+Feb 13 12:33:45 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:45 Time TRACE    : isNew()
+Feb 13 12:33:45 Time DEBUG    : no connectors
+Feb 13 12:33:45 Move TRACE    : isNew()
+Feb 13 12:33:45 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:46 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:46 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:46 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:46 Torque TRACE    : get_port_profile()
+Feb 13 12:33:46 Move TRACE    : get_port_profile()
+Feb 13 12:33:46 Time TRACE    : get_port_profile()
+Feb 13 12:33:46 Angle TRACE    : get_port_profile()
+Feb 13 12:33:46 Load TRACE    : get_port_profile()
+Feb 13 12:33:46 Speed TRACE    : get_port_profile()
+Feb 13 12:33:46 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:46 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:46 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:46 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:46 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:46 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:46 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:46 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:46 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:46 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:46 Angle TRACE    : DataType write()
+Feb 13 12:33:46 Load TRACE    : DataType write()
+Feb 13 12:33:46 Speed TRACE    : DataType write()
+Feb 13 12:33:46 Temperature TRACE    : DataType write()
+Feb 13 12:33:46 Voltage TRACE    : DataType write()
+Feb 13 12:33:46 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:46 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:46 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:46 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:46 Torque TRACE    : isNew()
+Feb 13 12:33:46 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:46 Time TRACE    : isNew()
+Feb 13 12:33:46 Time DEBUG    : no connectors
+Feb 13 12:33:46 Move TRACE    : isNew()
+Feb 13 12:33:46 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:47 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:47 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:47 Angle TRACE    : DataType write()
+Feb 13 12:33:47 Load TRACE    : DataType write()
+Feb 13 12:33:47 Speed TRACE    : DataType write()
+Feb 13 12:33:47 Temperature TRACE    : DataType write()
+Feb 13 12:33:47 Voltage TRACE    : DataType write()
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:47 Torque TRACE    : isNew()
+Feb 13 12:33:47 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:47 Time TRACE    : isNew()
+Feb 13 12:33:47 Time DEBUG    : no connectors
+Feb 13 12:33:47 Move TRACE    : isNew()
+Feb 13 12:33:47 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:47 Torque TRACE    : get_port_profile()
+Feb 13 12:33:47 Move TRACE    : get_port_profile()
+Feb 13 12:33:47 Time TRACE    : get_port_profile()
+Feb 13 12:33:47 Angle TRACE    : get_port_profile()
+Feb 13 12:33:47 Load TRACE    : get_port_profile()
+Feb 13 12:33:47 Speed TRACE    : get_port_profile()
+Feb 13 12:33:47 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:47 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:47 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:47 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:47 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:47 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:47 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:47 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:47 Angle TRACE    : DataType write()
+Feb 13 12:33:47 Load TRACE    : DataType write()
+Feb 13 12:33:47 Speed TRACE    : DataType write()
+Feb 13 12:33:47 Temperature TRACE    : DataType write()
+Feb 13 12:33:47 Voltage TRACE    : DataType write()
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:47 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:47 Torque TRACE    : isNew()
+Feb 13 12:33:47 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:47 Time TRACE    : isNew()
+Feb 13 12:33:47 Time DEBUG    : no connectors
+Feb 13 12:33:47 Move TRACE    : isNew()
+Feb 13 12:33:47 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:48 Manager TRACE    : Manager.shutdownOnNoRtcs()
+Feb 13 12:33:48 Manager TRACE    : Manager.getComponents()
+Feb 13 12:33:48 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:48 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:48 NamingManager TRACE    : NamingManager.update()
+Feb 13 12:33:48 NamingOnCorba TRACE    : isAlive()
+Feb 13 12:33:48 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:48 Torque TRACE    : get_port_profile()
+Feb 13 12:33:48 Move TRACE    : get_port_profile()
+Feb 13 12:33:48 Time TRACE    : get_port_profile()
+Feb 13 12:33:48 Angle TRACE    : get_port_profile()
+Feb 13 12:33:48 Load TRACE    : get_port_profile()
+Feb 13 12:33:48 Speed TRACE    : get_port_profile()
+Feb 13 12:33:48 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:48 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:48 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:48 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:48 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:48 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:48 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:48 Angle TRACE    : DataType write()
+Feb 13 12:33:48 Load TRACE    : DataType write()
+Feb 13 12:33:48 Speed TRACE    : DataType write()
+Feb 13 12:33:48 Temperature TRACE    : DataType write()
+Feb 13 12:33:48 Voltage TRACE    : DataType write()
+Feb 13 12:33:48 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:48 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:48 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:48 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:48 Torque TRACE    : isNew()
+Feb 13 12:33:48 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:48 Time TRACE    : isNew()
+Feb 13 12:33:48 Time DEBUG    : no connectors
+Feb 13 12:33:48 Move TRACE    : isNew()
+Feb 13 12:33:48 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:49 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:49 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:49 Angle TRACE    : DataType write()
+Feb 13 12:33:49 Load TRACE    : DataType write()
+Feb 13 12:33:49 Speed TRACE    : DataType write()
+Feb 13 12:33:49 Temperature TRACE    : DataType write()
+Feb 13 12:33:49 Voltage TRACE    : DataType write()
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:49 Torque TRACE    : isNew()
+Feb 13 12:33:49 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:49 Time TRACE    : isNew()
+Feb 13 12:33:49 Time DEBUG    : no connectors
+Feb 13 12:33:49 Move TRACE    : isNew()
+Feb 13 12:33:49 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:49 Torque TRACE    : get_port_profile()
+Feb 13 12:33:49 Move TRACE    : get_port_profile()
+Feb 13 12:33:49 Time TRACE    : get_port_profile()
+Feb 13 12:33:49 Angle TRACE    : get_port_profile()
+Feb 13 12:33:49 Load TRACE    : get_port_profile()
+Feb 13 12:33:49 Speed TRACE    : get_port_profile()
+Feb 13 12:33:49 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:49 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:49 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:49 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:49 Angle TRACE    : DataType write()
+Feb 13 12:33:49 Load TRACE    : DataType write()
+Feb 13 12:33:49 Speed TRACE    : DataType write()
+Feb 13 12:33:49 Temperature TRACE    : DataType write()
+Feb 13 12:33:49 Voltage TRACE    : DataType write()
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:49 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:49 Torque TRACE    : isNew()
+Feb 13 12:33:49 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:49 Time TRACE    : isNew()
+Feb 13 12:33:49 Time DEBUG    : no connectors
+Feb 13 12:33:49 Move TRACE    : isNew()
+Feb 13 12:33:49 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:50 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:50 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:50 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:50 Torque TRACE    : get_port_profile()
+Feb 13 12:33:50 Move TRACE    : get_port_profile()
+Feb 13 12:33:50 Time TRACE    : get_port_profile()
+Feb 13 12:33:50 Angle TRACE    : get_port_profile()
+Feb 13 12:33:50 Load TRACE    : get_port_profile()
+Feb 13 12:33:50 Speed TRACE    : get_port_profile()
+Feb 13 12:33:50 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:50 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:50 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:50 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:50 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:50 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:50 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:50 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:50 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:50 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:50 Angle TRACE    : DataType write()
+Feb 13 12:33:50 Load TRACE    : DataType write()
+Feb 13 12:33:50 Speed TRACE    : DataType write()
+Feb 13 12:33:50 Temperature TRACE    : DataType write()
+Feb 13 12:33:50 Voltage TRACE    : DataType write()
+Feb 13 12:33:50 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:50 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:50 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:50 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:50 Torque TRACE    : isNew()
+Feb 13 12:33:50 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:50 Time TRACE    : isNew()
+Feb 13 12:33:50 Time DEBUG    : no connectors
+Feb 13 12:33:50 Move TRACE    : isNew()
+Feb 13 12:33:50 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:51 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:51 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:51 Angle TRACE    : DataType write()
+Feb 13 12:33:51 Load TRACE    : DataType write()
+Feb 13 12:33:51 Speed TRACE    : DataType write()
+Feb 13 12:33:51 Temperature TRACE    : DataType write()
+Feb 13 12:33:51 Voltage TRACE    : DataType write()
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:51 Torque TRACE    : isNew()
+Feb 13 12:33:51 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:51 Time TRACE    : isNew()
+Feb 13 12:33:51 Time DEBUG    : no connectors
+Feb 13 12:33:51 Move TRACE    : isNew()
+Feb 13 12:33:51 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:51 Torque TRACE    : get_port_profile()
+Feb 13 12:33:51 Move TRACE    : get_port_profile()
+Feb 13 12:33:51 Time TRACE    : get_port_profile()
+Feb 13 12:33:51 Angle TRACE    : get_port_profile()
+Feb 13 12:33:51 Load TRACE    : get_port_profile()
+Feb 13 12:33:51 Speed TRACE    : get_port_profile()
+Feb 13 12:33:51 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:51 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:51 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:51 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:51 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:51 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:51 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:51 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:51 Angle TRACE    : DataType write()
+Feb 13 12:33:51 Load TRACE    : DataType write()
+Feb 13 12:33:51 Speed TRACE    : DataType write()
+Feb 13 12:33:51 Temperature TRACE    : DataType write()
+Feb 13 12:33:51 Voltage TRACE    : DataType write()
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:51 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:51 Torque TRACE    : isNew()
+Feb 13 12:33:51 Torque DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:51 Time TRACE    : isNew()
+Feb 13 12:33:51 Time DEBUG    : no connectors
+Feb 13 12:33:51 Move TRACE    : isNew()
+Feb 13 12:33:51 Move DEBUG    : isNew() = false, no readable data
+Feb 13 12:33:52 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 13 12:33:52 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 13 12:33:52 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 13 12:33:52 Torque TRACE    : get_port_profile()
+Feb 13 12:33:52 Torque WARN     : Dead connection:772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd
+Feb 13 12:33:52 Torque TRACE    : disconnect(772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd)
+Feb 13 12:33:52 Torque WARN     : Exception caught: minor code(1398079689).org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 201  completed: No
+Feb 13 12:33:52 Torque TRACE    : notify_disconnect(772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd)
+Feb 13 12:33:52 Torque TRACE    : unsubscribeInterfaces()
+Feb 13 12:33:52 Torque PARANOID : connector_id: 772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd
+Feb 13 12:33:52 InPortConnector TRACE    : profile()
+Feb 13 12:33:52 InPortConnector TRACE    : id() = 772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd
+Feb 13 12:33:52 InPortConnector TRACE    : profile()
+Feb 13 12:33:52 InPortConnector TRACE    : disconnect()
+Feb 13 12:33:52 Torque TRACE    : delete connector: 772df04c-4cd9-4ba7-9490-1a6d0a9a0ffd
+Feb 13 12:33:52 Move TRACE    : get_port_profile()
+Feb 13 12:33:52 Move WARN     : Dead connection:01f422ca-3178-4542-b791-b8c1ec2481cd
+Feb 13 12:33:52 Move TRACE    : disconnect(01f422ca-3178-4542-b791-b8c1ec2481cd)
+Feb 13 12:33:52 Move WARN     : Exception caught: minor code(1398079689).org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 201  completed: No
+Feb 13 12:33:52 Move TRACE    : notify_disconnect(01f422ca-3178-4542-b791-b8c1ec2481cd)
+Feb 13 12:33:52 Move TRACE    : unsubscribeInterfaces()
+Feb 13 12:33:52 Move PARANOID : connector_id: 01f422ca-3178-4542-b791-b8c1ec2481cd
+Feb 13 12:33:52 InPortConnector TRACE    : profile()
+Feb 13 12:33:52 InPortConnector TRACE    : id() = 01f422ca-3178-4542-b791-b8c1ec2481cd
+Feb 13 12:33:52 InPortConnector TRACE    : profile()
+Feb 13 12:33:52 InPortConnector TRACE    : disconnect()
+Feb 13 12:33:52 Move TRACE    : delete connector: 01f422ca-3178-4542-b791-b8c1ec2481cd
+Feb 13 12:33:52 Time TRACE    : get_port_profile()
+Feb 13 12:33:52 Angle TRACE    : get_port_profile()
+Feb 13 12:33:52 Load TRACE    : get_port_profile()
+Feb 13 12:33:52 Speed TRACE    : get_port_profile()
+Feb 13 12:33:52 Temperature TRACE    : get_port_profile()
+Feb 13 12:33:52 Voltage TRACE    : get_port_profile()
+Feb 13 12:33:52 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 13 12:33:52 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 13 12:33:52 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 13 12:33:52 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:52 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 13 12:33:52 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 13 12:33:52 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 13 12:33:52 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 13 12:33:52 Angle TRACE    : DataType write()
+Feb 13 12:33:52 Load TRACE    : DataType write()
+Feb 13 12:33:52 Speed TRACE    : DataType write()
+Feb 13 12:33:52 Temperature TRACE    : DataType write()
+Feb 13 12:33:52 Voltage TRACE    : DataType write()
+Feb 13 12:33:52 RTObject_impl TRACE    : RTObject_impl.onExecute(0)
+Feb 13 12:33:52 RTObject_impl TRACE    : RTObject_impl.on_state_update(0)
+Feb 13 12:33:52 RTObject_impl TRACE    : RTObject_impl.onStateUpdete(0)
+Feb 13 12:33:52 RTObject_impl TRACE    : RTObject_impl.on_execute(0)
+Feb 13 12:33:52 Torque TRACE    : isNew()
+Feb 13 12:33:52 Torque DEBUG    : no connectors
+Feb 13 12:33:52 Time TRACE    : isNew()
+Feb 13 12:33:52 Time DEBUG    : no connectors
+Feb 13 12:33:52 Move TRACE    : isNew()
+Feb 13 12:33:52 Move DEBUG    : no connectors
