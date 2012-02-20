@@ -18,7 +18,6 @@ import jp.go.aist.rtm.RTC.util.DataRef;
 import jp.go.aist.rtm.RTC.util.StringHolder;
 import jp.go.aist.rtm.RTC.util.IntegerHolder;
 import RTC.ReturnCode_t;
-import RS40XCB_Java.RS40XCB;
 
 /*!
  * @class RS40XCB_ARMImpl
@@ -58,6 +57,9 @@ public class RS40XCB_ARMImpl extends DataFlowComponentBase {
         m_voltage_out_val = new TimedLongSeq();
         m_voltage_out = new DataRef<TimedLongSeq>(m_voltage_out_val);
         m_VoltageOutOut = new OutPort<TimedLongSeq>("VoltageOut", m_voltage_out);
+        m_time_out_val = new TimedLongSeq();
+        m_time_out = new DataRef<TimedLongSeq>(m_time_out_val);
+        m_TimeOutOut = new OutPort<TimedLongSeq>("TimeOut", m_time_out);
         // </rtc-template>
 
     }
@@ -86,6 +88,7 @@ public class RS40XCB_ARMImpl extends DataFlowComponentBase {
         addOutPort("SpeedOut", m_SpeedOutOut);
         addOutPort("TemperatureOut", m_TemperatureOutOut);
         addOutPort("VoltageOut", m_VoltageOutOut);
+        addOutPort("TimeOut", m_TimeOutOut);
         // </rtc-template>
         bindParameter("portname", m_portname, "/dev/ttyUSB0");
         bindParameter("baudrate", m_baudrate, "115200");
@@ -180,8 +183,12 @@ public class RS40XCB_ARMImpl extends DataFlowComponentBase {
 		m_voltage_out.v.tm = new RTC.Time(0, 0);
 		m_voltage_out.v.data = new int[servoNum];
 		
+		m_time_out.v.tm = new RTC.Time(0, 0);
+		m_time_out.v.data = new int[servoNum];
+		
         return super.onActivated(ec_id);
     }
+
 
     /***
      *
@@ -202,18 +209,18 @@ public class RS40XCB_ARMImpl extends DataFlowComponentBase {
     }
 
     /***
-     *
-     * The execution action that is invoked periodically
-     * former rtc_active_do()
-     *
-     * @param ec_id target ExecutionContext Id
-     *
-     * @return RTC::ReturnCode_t
-     * 
-     * 
-     */
-    @Override
-    protected ReturnCode_t onExecute(int ec_id) {
+    *
+    * The execution action that is invoked periodically
+    * former rtc_active_do()
+    *
+    * @param ec_id target ExecutionContext Id
+    *
+    * @return RTC::ReturnCode_t
+    * 
+    * 
+    */
+   @Override
+   protected ReturnCode_t onExecute(int ec_id) {
 		if (m_TorqueInIn.isNew()) {
 			m_TorqueInIn.read();
 			for (int i = 0; i < m_torque_in.v.data.length; i++) {
@@ -242,6 +249,7 @@ public class RS40XCB_ARMImpl extends DataFlowComponentBase {
 			m_speed_out.v.data[i - m_startID.value] = servo.getSpeed();
 			m_temperature_out.v.data[i - m_startID.value] = servo.getTemperature();
 			m_voltage_out.v.data[i - m_startID.value] = servo.getVoltage();
+			m_time_out.v.data[i - m_startID.value] = servo.getTime();
 			
 		}
 		
@@ -250,10 +258,10 @@ public class RS40XCB_ARMImpl extends DataFlowComponentBase {
 		m_SpeedOutOut.write();
 		m_TemperatureOutOut.write();
 		m_VoltageOutOut.write();
-
-    	
-        return super.onExecute(ec_id);
-    }
+		m_TimeOutOut.write();
+   	
+       return super.onExecute(ec_id);
+   }
 
     /***
      *
@@ -433,6 +441,12 @@ public class RS40XCB_ARMImpl extends DataFlowComponentBase {
      * of about + - 0.3V. 
      */
     protected OutPort<TimedLongSeq> m_VoltageOutOut;
+
+    protected TimedLongSeq m_time_out_val;
+    protected DataRef<TimedLongSeq> m_time_out;
+    /*!
+     */
+    protected OutPort<TimedLongSeq> m_TimeOutOut;
 
     
     // </rtc-template>

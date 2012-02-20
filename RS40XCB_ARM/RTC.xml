@@ -57,5 +57,6 @@
     <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="RIGHT" rtcExt:variableName="voltage_out" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedLongSeq" rtc:name="VoltageOut" rtc:portType="DataOutPort">
         <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="" rtcDoc:description="This function can get supply voltage of unit of 10mV.. There is an error of about + - 0.3V. "/>
     </rtc:DataPorts>
+    <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="RIGHT" rtcExt:variableName="time_out" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="" rtc:type="RTC::TimedLongSeq" rtc:name="TimeOut" rtc:portType="DataOutPort"/>
     <rtc:Language xsi:type="rtcExt:language_ext" rtc:kind="Java"/>
 </rtc:RtcProfile>

@@ -1,0 +1,821 @@
+Feb 20 19:40:48 Manager INFO     : OpenRTM-aist-1.0.0
+Feb 20 19:40:48 Manager INFO     : Copyright (C) 2003-2008
+Feb 20 19:40:48 Manager INFO     :   Noriaki Ando
+Feb 20 19:40:48 Manager INFO     :   Task-intelligence Research Group,
+Feb 20 19:40:48 Manager INFO     :   Intelligent Systems Research Institute, AIST
+Feb 20 19:40:48 Manager INFO     : Manager starting.
+Feb 20 19:40:48 Manager INFO     : Starting local logging.
+Feb 20 19:40:48 Manager TRACE    : Manager.initORB()
+Feb 20 19:40:48 Manager DEBUG    : corba.args: 
+Feb 20 19:40:48 Manager DEBUG    : - config
+  - version: 1.0.0
+- openrtm
+  - version: OpenRTM-aist-1.0.0
+- manager
+  - instance_name: manager
+  - name: manager
+  - naming_formats: %h.host_cxt/%n.mgr
+  - pid: 1.6.0_261876269062
+  - refstring_path: /var/log/rtcmanager.ref
+  - modules
+    - load_path: ./
+    - abs_path_allowed: YES
+  - is_master: NO
+  - corba_servant: YES
+  - shutdown_on_nortcs: YES
+  - shutdown_auto: YES
+  - command: rtcd
+  - os
+    - name: Linux
+    - release: UNKNOWN
+    - version: 2.6.32-38-generic-pae
+    - arch: i386
+    - hostname: javatea-desktop
+- os
+  - name: 
+  - release: 
+  - version: 
+  - arch: 
+  - hostname: 
+- logger
+  - enable: YES
+  - file_name: ./rtc1.6.0_261876269062.log
+  - date_format: %b %d %H:%M:%S
+  - log_level: PARANOID
+  - stream_lock: NO
+  - master_logger: 
+- module
+  - conf_path: 
+  - load_path: 
+- naming
+  - enable: YES
+  - type: corba
+  - formats: %h.host_cxt/%n.rtc
+  - update
+    - enable: YES
+    - interval: 10.0
+- timer
+  - enable: YES
+  - tick: 0.1
+- corba
+  - args: 
+  - endpoint: 
+  - id: omniORB
+  - nameservers: localhost
+  - master_manager: localhost:2810
+  - nameservice
+    - replace_endpoint: NO
+- exec_cxt
+  - periodic
+    - type: jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext
+    - rate: 30.0
+  - evdriven
+    - type: jp.go.aist.rtm.RTC.executionContext.EventDrivenExecutionContext
+
+Feb 20 19:40:48 Manager DEBUG    : corbaloc: corbaloc:iiop:1.2@localhost:2810/manager
+Feb 20 19:40:48 Manager PARANOID : ORB options:  -ORBInitRef manager=corbaloc:iiop:1.2@localhost:2810/manager 
+Feb 20 19:40:48 InterceptorInitializer TRACE    : post_init
+Feb 20 19:40:48 IopIorInterceptor TRACE    : establish_components()
+Feb 20 19:40:48 IopIorInterceptor TRACE    : establish_components()
+Feb 20 19:40:48 Manager TRACE    : Manager.initNaming()
+Feb 20 19:40:48 Manager TRACE    : Register Naming Server: corba localhost
+Feb 20 19:40:48 NamingManager TRACE    : NamingManager.registerNameServer(corba, localhost:2809)
+Feb 20 19:40:48 NamingManager TRACE    : createNamingObj(method = corba, nameserver = )localhost:2809
+Feb 20 19:40:48 Manager TRACE    : Manager.getORB()
+Feb 20 19:40:48 CorbaNaming TRACE    : CorbaNaming.CorbaNaming(localhost:2809)
+Feb 20 19:40:48 NamingManager INFO     : NameServer connection succeeded: corba/localhost:2809
+Feb 20 19:40:48 Manager TRACE    : Manager.initFactories()
+Feb 20 19:40:48 InPortCorbaCdrProvider TRACE    : setInterfaceType(corba_cdr)
+Feb 20 19:40:48 InPortCorbaCdrProvider TRACE    : setInterfaceType(corba_cdr)
+Feb 20 19:40:48 Manager TRACE    : Manager.initExecContext()
+Feb 20 19:40:48 Manager TRACE    : Manager.registerECFactory(jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext)
+Feb 20 19:40:48 Manager TRACE    : Manager.registerECFactory(jp.go.aist.rtm.RTC.executionContext.ExtTrigExecutionContext)
+Feb 20 19:40:48 Manager TRACE    : Manager.registerECFactory(jp.go.aist.rtm.RTC.executionContext.OpenHRPExecutionContext)
+Feb 20 19:40:48 Manager TRACE    : Manager.initComposite()
+Feb 20 19:40:48 Manager TRACE    : Manager.registerFactory(PeriodicECSharedComposite)
+Feb 20 19:40:48 ManagerServant TRACE    : This manager is slave.
+Feb 20 19:40:48 ManagerServant TRACE    : findManager(host_port = localhost:2810)
+Feb 20 19:40:48 ManagerServant DEBUG    : corbaloc: corbaloc:iiop:1.2@localhost:2810/manager
+Feb 20 19:40:48 ManagerServant DEBUG    : CORBA SystemException caught (CORBA.org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 201  completed: No)
+Feb 20 19:40:48 ManagerServant INFO     : Master manager not found.
+Feb 20 19:40:48 Manager TRACE    : Manager.activateManager()
+Feb 20 19:40:48 Manager TRACE    : Manager.getPOAManager()
+Feb 20 19:40:48 Manager TRACE    : Manager.getPOAManager()
+Feb 20 19:40:48 Manager TRACE    : POA Manager activated.
+Feb 20 19:40:48 Manager TRACE    : Manager.registerFactory(RS40XCB_ARM)
+Feb 20 19:40:48 Manager TRACE    : Manager.createComponent(RS40XCB_ARM)
+Feb 20 19:40:48 Manager TRACE    : Manager.procComponentArgs(RS40XCB_ARM)
+Feb 20 19:40:48 Manager TRACE    : RTC basic propfile vendor:
+Feb 20 19:40:48 Manager TRACE    : RTC basic propfile category:
+Feb 20 19:40:48 Manager TRACE    : RTC basic propfile implementation_id:RS40XCB_ARM
+Feb 20 19:40:48 Manager TRACE    : RTC basic propfile version:
+Feb 20 19:40:48 Manager TRACE    : Manager.getORB()
+Feb 20 19:40:48 Manager TRACE    : Manager.getPOA()
+Feb 20 19:40:48 Manager TRACE    : Manager.getORB()
+Feb 20 19:40:48 Manager TRACE    : Manager.getPOA()
+Feb 20 19:40:48 Configuration_impl TRACE    : Configuration_impl.getObjRef()
+Feb 20 19:40:48 TorqueIn DEBUG    : Port name: TorqueIn
+Feb 20 19:40:48 TorqueIn DEBUG    : setting port.port_type: DataIntPort
+Feb 20 19:40:48 TorqueIn DEBUG    : setting dataport.data_type: TimedBooleanSeq
+Feb 20 19:40:48 PositionIn DEBUG    : Port name: PositionIn
+Feb 20 19:40:48 PositionIn DEBUG    : setting port.port_type: DataIntPort
+Feb 20 19:40:48 PositionIn DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 20 19:40:48 TimeIn DEBUG    : Port name: TimeIn
+Feb 20 19:40:48 TimeIn DEBUG    : setting port.port_type: DataIntPort
+Feb 20 19:40:48 TimeIn DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 20 19:40:48 PositionOut DEBUG    : Port name: PositionOut
+Feb 20 19:40:48 PositionOut DEBUG    : setting port.port_type: DataOutPort
+Feb 20 19:40:48 PositionOut DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 20 19:40:48 PositionOut DEBUG    : available subscription_type: new, flush, periodic
+Feb 20 19:40:48 LoadOut DEBUG    : Port name: LoadOut
+Feb 20 19:40:48 LoadOut DEBUG    : setting port.port_type: DataOutPort
+Feb 20 19:40:48 LoadOut DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 20 19:40:48 LoadOut DEBUG    : available subscription_type: new, flush, periodic
+Feb 20 19:40:48 SpeedOut DEBUG    : Port name: SpeedOut
+Feb 20 19:40:48 SpeedOut DEBUG    : setting port.port_type: DataOutPort
+Feb 20 19:40:48 SpeedOut DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 20 19:40:48 SpeedOut DEBUG    : available subscription_type: new, flush, periodic
+Feb 20 19:40:48 TemperatureOut DEBUG    : Port name: TemperatureOut
+Feb 20 19:40:48 TemperatureOut DEBUG    : setting port.port_type: DataOutPort
+Feb 20 19:40:48 TemperatureOut DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 20 19:40:48 TemperatureOut DEBUG    : available subscription_type: new, flush, periodic
+Feb 20 19:40:48 VoltageOut DEBUG    : Port name: VoltageOut
+Feb 20 19:40:48 VoltageOut DEBUG    : setting port.port_type: DataOutPort
+Feb 20 19:40:48 VoltageOut DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 20 19:40:48 VoltageOut DEBUG    : available subscription_type: new, flush, periodic
+Feb 20 19:40:48 TimeOut DEBUG    : Port name: TimeOut
+Feb 20 19:40:48 TimeOut DEBUG    : setting port.port_type: DataOutPort
+Feb 20 19:40:48 TimeOut DEBUG    : setting dataport.data_type: TimedLongSeq
+Feb 20 19:40:48 TimeOut DEBUG    : available subscription_type: new, flush, periodic
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.setProperties()
+Feb 20 19:40:48 Configuration_impl TRACE    : Configuration_impl.getDeviceProfile()
+Feb 20 19:40:48 Configuration_impl TRACE    : Configuration_impl.set_device_profile()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.getTypeName()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.setInstanceName(RS40XCB_ARM0)
+Feb 20 19:40:48 Manager TRACE    : RTC Created: 
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.getCategory()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.getTypeName()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.getInstanceName()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.setProperties()
+Feb 20 19:40:48 Configuration_impl TRACE    : Configuration_impl.getDeviceProfile()
+Feb 20 19:40:48 Configuration_impl TRACE    : Configuration_impl.set_device_profile()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.setProperties()
+Feb 20 19:40:48 Configuration_impl TRACE    : Configuration_impl.getDeviceProfile()
+Feb 20 19:40:48 Configuration_impl TRACE    : Configuration_impl.set_device_profile()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.getProperties()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.getProperties()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.getProperties()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.getProperties()
+Feb 20 19:40:48 RTObject_impl TRACE    : RTObject_impl.initialize()
+Feb 20 19:40:48 Manager TRACE    : Manager.createContext(jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext?rate=30.0)
+Feb 20 19:40:48 Manager TRACE    : ExecutionContext type: jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext
+Feb 20 19:40:48 Manager TRACE    : Manager.procContextArgs(jp.go.aist.rtm.RTC.executionContext.PeriodicExecutionContext?rate=30.0,)
+Feb 20 19:40:48 Manager TRACE    : EC property rate:30.0
+Feb 20 19:40:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.set_rate(30.0)
+Feb 20 19:40:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.getObjRef()
+Feb 20 19:40:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.bindComponent()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.bindContext()
+Feb 20 19:40:49 PeriodicExecutionContext DEBUG    : bindComponent() returns id = 0
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.on_initialize()
+Feb 20 19:40:49 RTObject_impl TRACE    : addInPort(TorqueIn)
+Feb 20 19:40:49 RTObject_impl TRACE    : addPort(PortBase)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : setOwner(RS40XCB_ARM0)
+Feb 20 19:40:49 TorqueIn TRACE    : getName() = RS40XCB_ARM0.TorqueIn
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : init()
+Feb 20 19:40:49 TorqueIn DEBUG    : single buffer mode.
+Feb 20 19:40:49 TorqueIn TRACE    : initProviders()
+Feb 20 19:40:49 TorqueIn DEBUG    : available providers: [corba_cdr]
+Feb 20 19:40:49 TorqueIn DEBUG    : dataflow_type push is supported
+Feb 20 19:40:49 TorqueIn TRACE    : iinitConsumers()
+Feb 20 19:40:49 TorqueIn DEBUG    : available consumer: corba_cdr
+Feb 20 19:40:49 TorqueIn DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 RTObject_impl TRACE    : addInPort(PositionIn)
+Feb 20 19:40:49 RTObject_impl TRACE    : addPort(PortBase)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : setOwner(RS40XCB_ARM0)
+Feb 20 19:40:49 PositionIn TRACE    : getName() = RS40XCB_ARM0.PositionIn
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : init()
+Feb 20 19:40:49 PositionIn DEBUG    : single buffer mode.
+Feb 20 19:40:49 PositionIn TRACE    : initProviders()
+Feb 20 19:40:49 PositionIn DEBUG    : available providers: [corba_cdr]
+Feb 20 19:40:49 PositionIn DEBUG    : dataflow_type push is supported
+Feb 20 19:40:49 PositionIn TRACE    : iinitConsumers()
+Feb 20 19:40:49 PositionIn DEBUG    : available consumer: corba_cdr
+Feb 20 19:40:49 PositionIn DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 RTObject_impl TRACE    : addInPort(TimeIn)
+Feb 20 19:40:49 RTObject_impl TRACE    : addPort(PortBase)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : setOwner(RS40XCB_ARM0)
+Feb 20 19:40:49 TimeIn TRACE    : getName() = RS40XCB_ARM0.TimeIn
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : init()
+Feb 20 19:40:49 TimeIn DEBUG    : single buffer mode.
+Feb 20 19:40:49 TimeIn TRACE    : initProviders()
+Feb 20 19:40:49 TimeIn DEBUG    : available providers: [corba_cdr]
+Feb 20 19:40:49 TimeIn DEBUG    : dataflow_type push is supported
+Feb 20 19:40:49 TimeIn TRACE    : iinitConsumers()
+Feb 20 19:40:49 TimeIn DEBUG    : available consumer: corba_cdr
+Feb 20 19:40:49 TimeIn DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 RTObject_impl TRACE    : addOutPort(PositionOut)
+Feb 20 19:40:49 RTObject_impl TRACE    : addPort(PortBase)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : setOwner(RS40XCB_ARM0)
+Feb 20 19:40:49 PositionOut TRACE    : getName() = RS40XCB_ARM0.PositionOut
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : init()
+Feb 20 19:40:49 PositionOut PARANOID : given properties:
+Feb 20 19:40:49 PositionOut DEBUG    : 
+Feb 20 19:40:49 PositionOut PARANOID : updated properties:
+Feb 20 19:40:49 PositionOut DEBUG    : 
+Feb 20 19:40:49 PositionOut TRACE    : initConsumers()
+Feb 20 19:40:49 PositionOut DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 20 19:40:49 PositionOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 PositionOut TRACE    : initProviders()
+Feb 20 19:40:49 PositionOut DEBUG    : available providers: [corba_cdr]
+Feb 20 19:40:49 PositionOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 RTObject_impl TRACE    : addOutPort(LoadOut)
+Feb 20 19:40:49 RTObject_impl TRACE    : addPort(PortBase)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : setOwner(RS40XCB_ARM0)
+Feb 20 19:40:49 LoadOut TRACE    : getName() = RS40XCB_ARM0.LoadOut
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : init()
+Feb 20 19:40:49 LoadOut PARANOID : given properties:
+Feb 20 19:40:49 LoadOut DEBUG    : 
+Feb 20 19:40:49 LoadOut PARANOID : updated properties:
+Feb 20 19:40:49 LoadOut DEBUG    : 
+Feb 20 19:40:49 LoadOut TRACE    : initConsumers()
+Feb 20 19:40:49 LoadOut DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 20 19:40:49 LoadOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 LoadOut TRACE    : initProviders()
+Feb 20 19:40:49 LoadOut DEBUG    : available providers: [corba_cdr]
+Feb 20 19:40:49 LoadOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 RTObject_impl TRACE    : addOutPort(SpeedOut)
+Feb 20 19:40:49 RTObject_impl TRACE    : addPort(PortBase)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : setOwner(RS40XCB_ARM0)
+Feb 20 19:40:49 SpeedOut TRACE    : getName() = RS40XCB_ARM0.SpeedOut
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : init()
+Feb 20 19:40:49 SpeedOut PARANOID : given properties:
+Feb 20 19:40:49 SpeedOut DEBUG    : 
+Feb 20 19:40:49 SpeedOut PARANOID : updated properties:
+Feb 20 19:40:49 SpeedOut DEBUG    : 
+Feb 20 19:40:49 SpeedOut TRACE    : initConsumers()
+Feb 20 19:40:49 SpeedOut DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 20 19:40:49 SpeedOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 SpeedOut TRACE    : initProviders()
+Feb 20 19:40:49 SpeedOut DEBUG    : available providers: [corba_cdr]
+Feb 20 19:40:49 SpeedOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 RTObject_impl TRACE    : addOutPort(TemperatureOut)
+Feb 20 19:40:49 RTObject_impl TRACE    : addPort(PortBase)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TemperatureOut TRACE    : setOwner(RS40XCB_ARM0)
+Feb 20 19:40:49 TemperatureOut TRACE    : getName() = RS40XCB_ARM0.TemperatureOut
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TemperatureOut TRACE    : init()
+Feb 20 19:40:49 TemperatureOut PARANOID : given properties:
+Feb 20 19:40:49 TemperatureOut DEBUG    : 
+Feb 20 19:40:49 TemperatureOut PARANOID : updated properties:
+Feb 20 19:40:49 TemperatureOut DEBUG    : 
+Feb 20 19:40:49 TemperatureOut TRACE    : initConsumers()
+Feb 20 19:40:49 TemperatureOut DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 20 19:40:49 TemperatureOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 TemperatureOut TRACE    : initProviders()
+Feb 20 19:40:49 TemperatureOut DEBUG    : available providers: [corba_cdr]
+Feb 20 19:40:49 TemperatureOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 RTObject_impl TRACE    : addOutPort(VoltageOut)
+Feb 20 19:40:49 RTObject_impl TRACE    : addPort(PortBase)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:40:49 VoltageOut TRACE    : setOwner(RS40XCB_ARM0)
+Feb 20 19:40:49 VoltageOut TRACE    : getName() = RS40XCB_ARM0.VoltageOut
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:40:49 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:40:49 VoltageOut TRACE    : init()
+Feb 20 19:40:49 VoltageOut PARANOID : given properties:
+Feb 20 19:40:49 VoltageOut DEBUG    : 
+Feb 20 19:40:49 VoltageOut PARANOID : updated properties:
+Feb 20 19:40:49 VoltageOut DEBUG    : 
+Feb 20 19:40:49 VoltageOut TRACE    : initConsumers()
+Feb 20 19:40:49 VoltageOut DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 20 19:40:49 VoltageOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 VoltageOut TRACE    : initProviders()
+Feb 20 19:40:49 VoltageOut DEBUG    : available providers: [corba_cdr]
+Feb 20 19:40:49 VoltageOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 RTObject_impl TRACE    : addOutPort(TimeOut)
+Feb 20 19:40:49 RTObject_impl TRACE    : addPort(PortBase)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:40:49 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeOut TRACE    : setOwner(RS40XCB_ARM0)
+Feb 20 19:40:49 TimeOut TRACE    : getName() = RS40XCB_ARM0.TimeOut
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:40:49 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionIn TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeIn TRACE    : get_port_profile()
+Feb 20 19:40:49 PositionOut TRACE    : get_port_profile()
+Feb 20 19:40:49 LoadOut TRACE    : get_port_profile()
+Feb 20 19:40:49 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:40:49 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:40:49 TimeOut TRACE    : init()
+Feb 20 19:40:49 TimeOut PARANOID : given properties:
+Feb 20 19:40:49 TimeOut DEBUG    : 
+Feb 20 19:40:49 TimeOut PARANOID : updated properties:
+Feb 20 19:40:49 TimeOut DEBUG    : 
+Feb 20 19:40:49 TimeOut TRACE    : initConsumers()
+Feb 20 19:40:49 TimeOut DEBUG    : available InPortConsumer: [corba_cdr]
+Feb 20 19:40:49 TimeOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 TimeOut TRACE    : initProviders()
+Feb 20 19:40:49 TimeOut DEBUG    : available providers: [corba_cdr]
+Feb 20 19:40:49 TimeOut DEBUG    : dataflow_type pull is supported
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.bindParameter(portname,/dev/ttyUSB0)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.bindParameter(baudrate,115200)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.bindParameter(startID,1)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.bindParameter(endID,7)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.onInitialize()
+Feb 20 19:40:49 RTObject_impl DEBUG    : EC[0] starting
+Feb 20 19:40:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.start()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.on_startup(0)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.onStartup(0)
+Feb 20 19:40:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.open()
+Feb 20 19:40:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.run()
+Feb 20 19:40:49 Manager TRACE    : RTC initialization succeeded: 
+Feb 20 19:40:49 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.svc()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getInstanceName()
+Feb 20 19:40:49 Manager TRACE    : Manager.registerComponent(RS40XCB_ARM0)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getInstanceName()
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getNamingNames()
+Feb 20 19:40:49 Manager TRACE    : Bind name: javatea-desktop.host_cxt/RS40XCB_ARM0.rtc
+Feb 20 19:40:49 NamingManager TRACE    : NamingManager.bindObject(javatea-desktop.host_cxt/RS40XCB_ARM0.rtc)
+Feb 20 19:40:49 RTObject_impl TRACE    : RTObject_impl.getObjRef()
+Feb 20 19:40:49 CorbaNaming TRACE    : in  CorbaNaming.rebindByString(javatea-desktop.host_cxt/RS40XCB_ARM0.rtc)
+Feb 20 19:40:49 CorbaNaming TRACE    : in  CorbaNaming.rebind([Lorg.omg.CosNaming.NameComponent;@17e845a,true)
+Feb 20 19:40:49 CorbaNaming TRACE    :     isNamingContext is false.
+Feb 20 19:40:49 CorbaNaming TRACE    : out  CorbaNaming.rebind()
+Feb 20 19:40:49 CorbaNaming TRACE    : out CorbaNaming.rebindByString(javatea-desktop.host_cxt/RS40XCB_ARM0.rtc)
+Feb 20 19:40:49 Manager TRACE    : Manager.runManager(): blocking mode
+Feb 20 19:40:49 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:49 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:50 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:50 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:51 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:51 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:52 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:52 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:53 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:53 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:54 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:54 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:55 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:55 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:56 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:56 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:57 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:57 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:58 Manager TRACE    : Manager.shutdownOnNoRtcs()
+Feb 20 19:40:58 Manager TRACE    : Manager.getComponents()
+Feb 20 19:40:58 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:58 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:40:58 NamingManager TRACE    : NamingManager.update()
+Feb 20 19:40:58 NamingOnCorba TRACE    : isAlive()
+Feb 20 19:40:59 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:40:59 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:00 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:00 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:01 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:01 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:02 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:02 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:03 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:03 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:04 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:04 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:05 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:05 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:06 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:06 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:07 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:07 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:08 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:08 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:08 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:08 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:08 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:08 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:08 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:08 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:08 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_configuration()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:08 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:08 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_owned_organizations()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_context_handle()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:08 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:08 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:08 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:08 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:08 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:08 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:08 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:08 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:08 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:08 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:08 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_context_handle()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:08 Manager TRACE    : Manager.shutdownOnNoRtcs()
+Feb 20 19:41:08 Manager TRACE    : Manager.getComponents()
+Feb 20 19:41:08 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:08 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:08 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:08 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:08 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:08 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:08 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:08 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:08 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:08 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:08 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:08 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:08 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:08 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:08 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:08 NamingManager TRACE    : NamingManager.update()
+Feb 20 19:41:08 NamingOnCorba TRACE    : isAlive()
+Feb 20 19:41:09 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:09 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:09 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:09 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:09 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:09 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:09 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:09 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:09 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:09 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:09 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:09 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:09 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:09 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:09 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:09 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:09 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:09 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:09 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:09 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:10 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:10 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:10 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:10 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:10 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:10 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:10 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:10 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:10 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:10 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:10 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:10 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:10 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:10 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:10 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:10 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:10 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:10 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:10 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:10 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:11 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:11 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:11 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:11 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:11 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:11 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:11 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:11 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:11 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:11 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:11 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:11 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:11 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:11 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:11 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:11 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:11 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:11 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:11 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:11 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:12 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:12 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:12 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:12 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:12 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:12 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:12 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:12 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:12 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:12 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:12 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:12 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:12 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:12 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:12 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:12 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:12 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:12 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:12 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:12 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:13 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:13 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:13 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:13 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:13 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:13 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:13 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:13 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:13 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:13 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:13 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:13 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:13 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:13 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:13 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:13 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:13 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:13 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:13 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:13 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:14 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:14 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:14 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:14 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:14 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:14 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:14 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:14 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:14 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:14 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:14 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:14 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:14 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:14 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:14 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:14 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:14 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:14 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:14 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:14 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:15 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:15 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:15 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:15 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:15 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:15 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:15 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:15 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:15 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:15 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:15 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:15 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:15 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:15 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:15 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:15 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:15 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:15 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:15 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:15 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:16 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:16 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:16 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:16 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:16 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:16 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:16 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:16 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:16 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:16 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:16 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:16 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:16 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:16 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:16 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:16 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:16 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:16 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:16 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:16 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:17 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:17 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:17 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:17 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:17 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:17 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:17 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:17 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:17 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:17 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:17 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:17 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:17 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:17 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:17 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:17 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:17 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:17 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:17 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:17 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:18 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:18 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:18 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:18 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:18 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:18 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:18 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:18 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:18 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:18 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:18 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:18 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:18 Manager TRACE    : Manager.shutdownOnNoRtcs()
+Feb 20 19:41:18 Manager TRACE    : Manager.getComponents()
+Feb 20 19:41:18 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:18 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:18 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:18 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:18 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:18 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:18 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:18 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:18 NamingManager TRACE    : NamingManager.update()
+Feb 20 19:41:18 NamingOnCorba TRACE    : isAlive()
+Feb 20 19:41:19 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:19 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:19 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:19 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:19 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:19 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:19 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:19 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:19 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:19 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:19 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:19 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:19 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:19 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:19 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:19 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:19 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:19 Manager VERBOSE  : 0 components are marked as finalized.
+Feb 20 19:41:19 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:19 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:20 RTObject_impl TRACE    : RTObject_impl.get_component_profile()
+Feb 20 19:41:20 TorqueIn TRACE    : get_port_profile()
+Feb 20 19:41:20 PositionIn TRACE    : get_port_profile()
+Feb 20 19:41:20 TimeIn TRACE    : get_port_profile()
+Feb 20 19:41:20 PositionOut TRACE    : get_port_profile()
+Feb 20 19:41:20 LoadOut TRACE    : get_port_profile()
+Feb 20 19:41:20 SpeedOut TRACE    : get_port_profile()
+Feb 20 19:41:20 TemperatureOut TRACE    : get_port_profile()
+Feb 20 19:41:20 VoltageOut TRACE    : get_port_profile()
+Feb 20 19:41:20 TimeOut TRACE    : get_port_profile()
+Feb 20 19:41:20 RTObject_impl TRACE    : RTObject_impl.get_owned_contexts()
+Feb 20 19:41:20 RTObject_impl TRACE    : RTObject_impl.get_participating_contexts()
+Feb 20 19:41:20 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_component_state()
+Feb 20 19:41:20 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:20 Configuration_impl TRACE    : Configuration_impl.get_configuration_sets()
+Feb 20 19:41:20 Configuration_impl TRACE    : Configuration_impl.get_active_configuration_set()
+Feb 20 19:41:20 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.get_profile()
+Feb 20 19:41:20 PeriodicExecutionContext TRACE    : PeriodicExecutionContext.is_running()
+Feb 20 19:41:20 Manager VERBOSE  : Manager.cleanupComponents()
+Feb 20 19:41:20 Manager VERBOSE  : 0 components are marked as finalized.
