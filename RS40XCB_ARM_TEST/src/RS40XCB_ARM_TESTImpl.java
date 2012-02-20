@@ -46,6 +46,9 @@ public class RS40XCB_ARM_TESTImpl extends DataFlowComponentBase {
         m_voltage_in_val = new TimedLongSeq();
         m_voltage_in = new DataRef<TimedLongSeq>(m_voltage_in_val);
         m_VoltageInIn = new InPort<TimedLongSeq>("VoltageIn", m_voltage_in);
+        m_time_in_val = new TimedLongSeq();
+        m_time_in = new DataRef<TimedLongSeq>(m_time_in_val);
+        m_TimeInIn = new InPort<TimedLongSeq>("TimeIn", m_time_in);
         m_torque_out_val = new TimedBooleanSeq();
         m_torque_out = new DataRef<TimedBooleanSeq>(m_torque_out_val);
         m_TorqueOutOut = new OutPort<TimedBooleanSeq>("TorqueOut", m_torque_out);
@@ -78,6 +81,7 @@ public class RS40XCB_ARM_TESTImpl extends DataFlowComponentBase {
         addInPort("SpeedIn", m_SpeedInIn);
         addInPort("TemperatureIn", m_TemperatureInIn);
         addInPort("VoltageIn", m_VoltageInIn);
+        addInPort("TimeIn", m_TimeInIn);
         
         // Set OutPort buffer
         addOutPort("TorqueOut", m_TorqueOutOut);
@@ -151,8 +155,6 @@ public class RS40XCB_ARM_TESTImpl extends DataFlowComponentBase {
      */
     @Override
     protected ReturnCode_t onActivated(int ec_id) {
-    	System.out.println("ARM Test");
-    	
         return super.onActivated(ec_id);
     }
 
@@ -245,6 +247,14 @@ public class RS40XCB_ARM_TESTImpl extends DataFlowComponentBase {
 				m_TemperatureInIn.read();
 			}
 			
+			if (m_TemperatureInIn.isNew()) {
+				m_TemperatureInIn.read();
+			}
+			
+			if (m_TimeInIn.isNew()) {
+				m_TimeInIn.read();
+			}
+			
 			System.out.print("Angle:");
 			displayData(m_position_in.v.data);
 			
@@ -259,6 +269,9 @@ public class RS40XCB_ARM_TESTImpl extends DataFlowComponentBase {
 			
 			System.out.print("Voltage:");
 			displayData(m_voltage_in.v.data);
+			
+			System.out.print("Time:");
+			displayData(m_time_in.v.data);
 		} else {
 			System.out.println("Command not found");
 		}
@@ -413,6 +426,12 @@ public class RS40XCB_ARM_TESTImpl extends DataFlowComponentBase {
     /*!
      */
     protected InPort<TimedLongSeq> m_VoltageInIn;
+
+    protected TimedLongSeq m_time_in_val;
+    protected DataRef<TimedLongSeq> m_time_in;
+    /*!
+     */
+    protected InPort<TimedLongSeq> m_TimeInIn;
 
     
     // </rtc-template>
